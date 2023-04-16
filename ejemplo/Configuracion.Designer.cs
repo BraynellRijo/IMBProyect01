@@ -139,6 +139,7 @@
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnMinimizar.TabIndex = 9;
             this.btnMinimizar.TabStop = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
             // btnCerrarApp
             // 
@@ -152,6 +153,7 @@
             this.btnCerrarApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnCerrarApp.TabIndex = 8;
             this.btnCerrarApp.TabStop = false;
+            this.btnCerrarApp.Click += new System.EventHandler(this.btnCerrarApp_Click);
             // 
             // ModeLight
             // 

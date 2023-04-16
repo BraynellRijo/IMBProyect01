@@ -20,7 +20,15 @@ namespace ejemplo.Resources
         {
             InitializeComponent();
         }
+        private void btnCerrarApp_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
 
+        }
         private void label1_Click(object sender, EventArgs e)
         {
             

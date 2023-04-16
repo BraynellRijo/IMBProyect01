@@ -21,7 +21,15 @@ namespace ejemplo
         {
             InitializeComponent();
         }
+        private void btnCerrarApp_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
 
+        }
         private void btnInicio_Click(object sender, EventArgs e)
         {
             
@@ -36,23 +44,6 @@ namespace ejemplo
         {
 
         }
-        private void BusquedaBar_Enter(object sender, EventArgs e)
-        {
-            if (BusquedaBar.Text == "Buscar...")
-            {
-                BusquedaBar.Text = "";
-                BusquedaBar.ForeColor = Color.DimGray;
-            }
-        }
 
-        private void BusquedaBar_Leave(object sender, EventArgs e)
-        {
-
-            if (BusquedaBar.Text == "")
-            {
-                BusquedaBar.Text = "Buscar...";
-                BusquedaBar.ForeColor = Color.FromArgb(64, 64, 64);
-            }
-        }
     } 
 }
