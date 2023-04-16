@@ -32,6 +32,13 @@
             this.btnSubirDrive = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.label1 = new System.Windows.Forms.Label();
             this.DialogDispositivo = new System.Windows.Forms.OpenFileDialog();
+            this.MaxMoveWindows = new Bunifu.UI.WinForms.BunifuFormDock();
+            this.Header = new System.Windows.Forms.Panel();
+            this.btnMinimizar = new System.Windows.Forms.PictureBox();
+            this.btnCerrarApp = new System.Windows.Forms.PictureBox();
+            this.Header.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrarApp)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSubirDispo
@@ -97,12 +104,87 @@
             // 
             this.DialogDispositivo.FileName = "Archivos del Dispositivo";
             // 
+            // MaxMoveWindows
+            // 
+            this.MaxMoveWindows.AllowFormDragging = true;
+            this.MaxMoveWindows.AllowFormDropShadow = true;
+            this.MaxMoveWindows.AllowFormResizing = true;
+            this.MaxMoveWindows.AllowHidingBottomRegion = true;
+            this.MaxMoveWindows.AllowOpacityChangesWhileDragging = false;
+            this.MaxMoveWindows.BorderOptions.BottomBorder.BorderColor = System.Drawing.Color.Silver;
+            this.MaxMoveWindows.BorderOptions.BottomBorder.BorderThickness = 1;
+            this.MaxMoveWindows.BorderOptions.BottomBorder.ShowBorder = true;
+            this.MaxMoveWindows.BorderOptions.LeftBorder.BorderColor = System.Drawing.Color.Silver;
+            this.MaxMoveWindows.BorderOptions.LeftBorder.BorderThickness = 1;
+            this.MaxMoveWindows.BorderOptions.LeftBorder.ShowBorder = true;
+            this.MaxMoveWindows.BorderOptions.RightBorder.BorderColor = System.Drawing.Color.Silver;
+            this.MaxMoveWindows.BorderOptions.RightBorder.BorderThickness = 1;
+            this.MaxMoveWindows.BorderOptions.RightBorder.ShowBorder = true;
+            this.MaxMoveWindows.BorderOptions.TopBorder.BorderColor = System.Drawing.Color.Silver;
+            this.MaxMoveWindows.BorderOptions.TopBorder.BorderThickness = 1;
+            this.MaxMoveWindows.BorderOptions.TopBorder.ShowBorder = true;
+            this.MaxMoveWindows.ContainerControl = this;
+            this.MaxMoveWindows.DockingIndicatorsColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.MaxMoveWindows.DockingIndicatorsOpacity = 0.5D;
+            this.MaxMoveWindows.DockingOptions.DockAll = true;
+            this.MaxMoveWindows.DockingOptions.DockBottomLeft = true;
+            this.MaxMoveWindows.DockingOptions.DockBottomRight = true;
+            this.MaxMoveWindows.DockingOptions.DockFullScreen = true;
+            this.MaxMoveWindows.DockingOptions.DockLeft = true;
+            this.MaxMoveWindows.DockingOptions.DockRight = true;
+            this.MaxMoveWindows.DockingOptions.DockTopLeft = true;
+            this.MaxMoveWindows.DockingOptions.DockTopRight = true;
+            this.MaxMoveWindows.FormDraggingOpacity = 0.9D;
+            this.MaxMoveWindows.ParentForm = this;
+            this.MaxMoveWindows.ShowCursorChanges = true;
+            this.MaxMoveWindows.ShowDockingIndicators = true;
+            this.MaxMoveWindows.TitleBarOptions.AllowFormDragging = true;
+            this.MaxMoveWindows.TitleBarOptions.BunifuFormDock = this.MaxMoveWindows;
+            this.MaxMoveWindows.TitleBarOptions.DoubleClickToExpandWindow = true;
+            this.MaxMoveWindows.TitleBarOptions.TitleBarControl = this.Header;
+            this.MaxMoveWindows.TitleBarOptions.UseBackColorOnDockingIndicators = true;
+            // 
+            // Header
+            // 
+            this.Header.Controls.Add(this.btnMinimizar);
+            this.Header.Controls.Add(this.btnCerrarApp);
+            this.Header.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Header.Location = new System.Drawing.Point(0, 0);
+            this.Header.Name = "Header";
+            this.Header.Size = new System.Drawing.Size(625, 25);
+            this.Header.TabIndex = 29;
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimizar.Image = global::ejemplo.Properties.Resources.minimizar_signo;
+            this.btnMinimizar.Location = new System.Drawing.Point(567, 3);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(24, 19);
+            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMinimizar.TabIndex = 9;
+            this.btnMinimizar.TabStop = false;
+            // 
+            // btnCerrarApp
+            // 
+            this.btnCerrarApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrarApp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCerrarApp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarApp.Image = global::ejemplo.Properties.Resources.eliminar__1_;
+            this.btnCerrarApp.Location = new System.Drawing.Point(593, 3);
+            this.btnCerrarApp.Name = "btnCerrarApp";
+            this.btnCerrarApp.Size = new System.Drawing.Size(22, 19);
+            this.btnCerrarApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCerrarApp.TabIndex = 8;
+            this.btnCerrarApp.TabStop = false;
+            // 
             // ImportarC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(641, 347);
+            this.ClientSize = new System.Drawing.Size(625, 353);
+            this.Controls.Add(this.Header);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSubirDrive);
             this.Controls.Add(this.btnSubirDispo);
@@ -111,10 +193,12 @@
             this.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.StateCommon.Border.Rounding = 5;
             this.Text = "ImportarC";
             this.Load += new System.EventHandler(this.ImportarC_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ImportC_MouseDown);
+            this.Header.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrarApp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -125,5 +209,9 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnSubirDrive;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.OpenFileDialog DialogDispositivo;
+        private Bunifu.UI.WinForms.BunifuFormDock MaxMoveWindows;
+        private System.Windows.Forms.Panel Header;
+        private System.Windows.Forms.PictureBox btnMinimizar;
+        private System.Windows.Forms.PictureBox btnCerrarApp;
     }
 }

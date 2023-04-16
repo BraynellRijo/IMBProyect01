@@ -36,5 +36,23 @@ namespace ejemplo
         {
 
         }
+        private void BusquedaBar_Enter(object sender, EventArgs e)
+        {
+            if (BusquedaBar.Text == "Buscar...")
+            {
+                BusquedaBar.Text = "";
+                BusquedaBar.ForeColor = Color.DimGray;
+            }
+        }
+
+        private void BusquedaBar_Leave(object sender, EventArgs e)
+        {
+
+            if (BusquedaBar.Text == "")
+            {
+                BusquedaBar.Text = "Buscar...";
+                BusquedaBar.ForeColor = Color.FromArgb(64, 64, 64);
+            }
+        }
     } 
 }

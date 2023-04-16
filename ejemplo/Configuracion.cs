@@ -36,5 +36,12 @@ namespace ejemplo
 
         }
 
+        private void ModeLight_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ModeLight.Checked == true)
+            {
+                //Configuracion.DefaultBackColor = Color.LightCoral;
+            }
+        }
     }
 }

@@ -17,7 +17,7 @@ using MusicPlayerYT;
 
 namespace ejemplo
 {
-    public partial class Inicio : KryptonForm
+    public partial class Inicio : Form
     {
         public Inicio()
         {
@@ -25,13 +25,7 @@ namespace ejemplo
         }
         private void Inicio_MouseDown(object sender, MouseEventArgs e)
         {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hwnd, int wnsg, int wparam, int lparam);
         private void btnCerrarApp_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -144,24 +138,7 @@ namespace ejemplo
         {
             abrirForm(new List());
         }
-        private void BusquedaBar_Enter(object sender, EventArgs e)
-        {
-            if (BusquedaBar.Text == "Buscar...")
-            {
-                BusquedaBar.Text = "";
-                BusquedaBar.ForeColor = Color.DimGray;
-            }
-        }
 
-        private void BusquedaBar_Leave(object sender, EventArgs e)
-        {
-
-            if (BusquedaBar.Text == "")
-            {
-                BusquedaBar.Text = "Buscar...";
-                BusquedaBar.ForeColor = Color.FromArgb(64, 64, 64);
-            }
-        }
 
         private void btnSentting_Click(object sender, EventArgs e)
         {

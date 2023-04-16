@@ -31,8 +31,8 @@ namespace ejemplo
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.MenuV = new System.Windows.Forms.Panel();
-            this.BusquedaBar = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.btnSentting = new System.Windows.Forms.Label();
             this.btmImport = new System.Windows.Forms.Label();
             this.btnAlbum = new System.Windows.Forms.Label();
@@ -51,8 +51,15 @@ namespace ejemplo
             this.btnStateNormal = new System.Windows.Forms.PictureBox();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnCerrarApp = new System.Windows.Forms.PictureBox();
-            this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.Header = new System.Windows.Forms.Panel();
+            this.MaxMoveWindows = new Bunifu.UI.WinForms.BunifuFormDock();
+            this.btnMinimizar = new System.Windows.Forms.PictureBox();
+            this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblTipoUser = new System.Windows.Forms.Label();
+            this.Inidicador = new Bunifu.UI.WinForms.BunifuShapes();
+            this.bunifuShapes2 = new Bunifu.UI.WinForms.BunifuShapes();
             this.MenuV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BarraReproduccion)).BeginInit();
             this.BarraReproduccion.SuspendLayout();
@@ -65,44 +72,31 @@ namespace ejemplo
             ((System.ComponentModel.ISupportInitialize)(this.btnStateNormal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrarApp)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             this.panelContenedor.SuspendLayout();
+            this.Header.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuV
             // 
             this.MenuV.AutoSize = true;
             this.MenuV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.MenuV.Controls.Add(this.BusquedaBar);
+            this.MenuV.Controls.Add(this.Inidicador);
+            this.MenuV.Controls.Add(this.lblTipoUser);
+            this.MenuV.Controls.Add(this.label1);
+            this.MenuV.Controls.Add(this.bunifuPictureBox1);
             this.MenuV.Controls.Add(this.btnSentting);
             this.MenuV.Controls.Add(this.btmImport);
             this.MenuV.Controls.Add(this.btnAlbum);
             this.MenuV.Controls.Add(this.btnPistas);
             this.MenuV.Controls.Add(this.btnInicio);
-            this.MenuV.Location = new System.Drawing.Point(0, -2);
+            this.MenuV.Controls.Add(this.bunifuShapes2);
+            this.MenuV.Dock = System.Windows.Forms.DockStyle.Left;
+            this.MenuV.Location = new System.Drawing.Point(0, 0);
             this.MenuV.Name = "MenuV";
-            this.MenuV.Size = new System.Drawing.Size(273, 355);
+            this.MenuV.Size = new System.Drawing.Size(277, 353);
             this.MenuV.TabIndex = 6;
-            // 
-            // BusquedaBar
-            // 
-            this.BusquedaBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.BusquedaBar.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.BusquedaBar.Location = new System.Drawing.Point(19, 14);
-            this.BusquedaBar.Multiline = true;
-            this.BusquedaBar.Name = "BusquedaBar";
-            this.BusquedaBar.Size = new System.Drawing.Size(232, 46);
-            this.BusquedaBar.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.BusquedaBar.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.BusquedaBar.StateCommon.Border.Rounding = 25;
-            this.BusquedaBar.StateCommon.Content.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BusquedaBar.TabIndex = 18;
-            this.BusquedaBar.Text = "Buscar...";
-            this.BusquedaBar.Enter += new System.EventHandler(this.BusquedaBar_Enter);
-            this.BusquedaBar.Leave += new System.EventHandler(this.BusquedaBar_Leave);
             // 
             // btnSentting
             // 
@@ -110,7 +104,7 @@ namespace ejemplo
             this.btnSentting.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSentting.Font = new System.Drawing.Font("Poppins", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSentting.ForeColor = System.Drawing.Color.LightGray;
-            this.btnSentting.Location = new System.Drawing.Point(29, 285);
+            this.btnSentting.Location = new System.Drawing.Point(45, 285);
             this.btnSentting.Name = "btnSentting";
             this.btnSentting.Size = new System.Drawing.Size(171, 37);
             this.btnSentting.TabIndex = 5;
@@ -125,7 +119,7 @@ namespace ejemplo
             this.btmImport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btmImport.Font = new System.Drawing.Font("Poppins", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btmImport.ForeColor = System.Drawing.Color.LightGray;
-            this.btmImport.Location = new System.Drawing.Point(29, 248);
+            this.btmImport.Location = new System.Drawing.Point(45, 248);
             this.btmImport.Name = "btmImport";
             this.btmImport.Size = new System.Drawing.Size(229, 37);
             this.btmImport.TabIndex = 4;
@@ -140,7 +134,7 @@ namespace ejemplo
             this.btnAlbum.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAlbum.Font = new System.Drawing.Font("Poppins", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlbum.ForeColor = System.Drawing.Color.LightGray;
-            this.btnAlbum.Location = new System.Drawing.Point(29, 172);
+            this.btnAlbum.Location = new System.Drawing.Point(45, 172);
             this.btnAlbum.Name = "btnAlbum";
             this.btnAlbum.Size = new System.Drawing.Size(113, 37);
             this.btnAlbum.TabIndex = 3;
@@ -155,7 +149,7 @@ namespace ejemplo
             this.btnPistas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPistas.Font = new System.Drawing.Font("Poppins", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPistas.ForeColor = System.Drawing.Color.LightGray;
-            this.btnPistas.Location = new System.Drawing.Point(29, 135);
+            this.btnPistas.Location = new System.Drawing.Point(45, 135);
             this.btnPistas.Name = "btnPistas";
             this.btnPistas.Size = new System.Drawing.Size(83, 37);
             this.btnPistas.TabIndex = 2;
@@ -170,7 +164,7 @@ namespace ejemplo
             this.btnInicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInicio.Font = new System.Drawing.Font("Poppins", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInicio.ForeColor = System.Drawing.Color.LightGray;
-            this.btnInicio.Location = new System.Drawing.Point(29, 98);
+            this.btnInicio.Location = new System.Drawing.Point(45, 98);
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Size = new System.Drawing.Size(75, 37);
             this.btnInicio.TabIndex = 1;
@@ -198,7 +192,6 @@ namespace ejemplo
             this.BarraReproduccion.StateCommon.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(0)))));
             this.BarraReproduccion.StateCommon.ColorAngle = 360F;
             this.BarraReproduccion.StateCommon.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Dashed;
-            this.BarraReproduccion.StateCommon.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.BarraReproduccion.TabIndex = 5;
             // 
             // btnLoop
@@ -313,7 +306,7 @@ namespace ejemplo
             this.btnStateNormal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnStateNormal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStateNormal.Image = global::ejemplo.Properties.Resources.maximizar;
-            this.btnStateNormal.Location = new System.Drawing.Point(570, 84);
+            this.btnStateNormal.Location = new System.Drawing.Point(1008, 84);
             this.btnStateNormal.Name = "btnStateNormal";
             this.btnStateNormal.Size = new System.Drawing.Size(32, 26);
             this.btnStateNormal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -326,7 +319,7 @@ namespace ejemplo
             this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMaximizar.Image = global::ejemplo.Properties.Resources.maximizarN;
-            this.btnMaximizar.Location = new System.Drawing.Point(570, 84);
+            this.btnMaximizar.Location = new System.Drawing.Point(1008, 84);
             this.btnMaximizar.Name = "btnMaximizar";
             this.btnMaximizar.Size = new System.Drawing.Size(32, 26);
             this.btnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -336,48 +329,168 @@ namespace ejemplo
             // 
             // btnCerrarApp
             // 
+            this.btnCerrarApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCerrarApp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCerrarApp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrarApp.Image = global::ejemplo.Properties.Resources.eliminar__1_;
-            this.btnCerrarApp.Location = new System.Drawing.Point(604, 84);
+            this.btnCerrarApp.Location = new System.Drawing.Point(607, 3);
             this.btnCerrarApp.Name = "btnCerrarApp";
-            this.btnCerrarApp.Size = new System.Drawing.Size(31, 26);
+            this.btnCerrarApp.Size = new System.Drawing.Size(22, 19);
             this.btnCerrarApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnCerrarApp.TabIndex = 8;
             this.btnCerrarApp.TabStop = false;
             this.btnCerrarApp.Click += new System.EventHandler(this.btnCerrarApp_Click);
             // 
-            // btnMinimizar
-            // 
-            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinimizar.Image = global::ejemplo.Properties.Resources.minimizar_signo;
-            this.btnMinimizar.Location = new System.Drawing.Point(540, 84);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(32, 26);
-            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnMinimizar.TabIndex = 7;
-            this.btnMinimizar.TabStop = false;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
-            // 
             // panelContenedor
             // 
             this.panelContenedor.AutoScroll = true;
+            this.panelContenedor.Controls.Add(this.Header);
             this.panelContenedor.Controls.Add(this.btnStateNormal);
             this.panelContenedor.Controls.Add(this.btnMaximizar);
-            this.panelContenedor.Controls.Add(this.btnCerrarApp);
-            this.panelContenedor.Controls.Add(this.btnMinimizar);
-            this.panelContenedor.Location = new System.Drawing.Point(274, 2);
+            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenedor.Location = new System.Drawing.Point(277, 0);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(641, 350);
+            this.panelContenedor.Size = new System.Drawing.Size(639, 353);
             this.panelContenedor.TabIndex = 11;
+            // 
+            // Header
+            // 
+            this.Header.Controls.Add(this.btnMinimizar);
+            this.Header.Controls.Add(this.btnCerrarApp);
+            this.Header.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Header.Location = new System.Drawing.Point(0, 0);
+            this.Header.Name = "Header";
+            this.Header.Size = new System.Drawing.Size(639, 25);
+            this.Header.TabIndex = 12;
+            // 
+            // MaxMoveWindows
+            // 
+            this.MaxMoveWindows.AllowFormDragging = true;
+            this.MaxMoveWindows.AllowFormDropShadow = true;
+            this.MaxMoveWindows.AllowFormResizing = true;
+            this.MaxMoveWindows.AllowHidingBottomRegion = true;
+            this.MaxMoveWindows.AllowOpacityChangesWhileDragging = false;
+            this.MaxMoveWindows.BorderOptions.BottomBorder.BorderColor = System.Drawing.Color.Silver;
+            this.MaxMoveWindows.BorderOptions.BottomBorder.BorderThickness = 1;
+            this.MaxMoveWindows.BorderOptions.BottomBorder.ShowBorder = true;
+            this.MaxMoveWindows.BorderOptions.LeftBorder.BorderColor = System.Drawing.Color.Silver;
+            this.MaxMoveWindows.BorderOptions.LeftBorder.BorderThickness = 1;
+            this.MaxMoveWindows.BorderOptions.LeftBorder.ShowBorder = true;
+            this.MaxMoveWindows.BorderOptions.RightBorder.BorderColor = System.Drawing.Color.Silver;
+            this.MaxMoveWindows.BorderOptions.RightBorder.BorderThickness = 1;
+            this.MaxMoveWindows.BorderOptions.RightBorder.ShowBorder = true;
+            this.MaxMoveWindows.BorderOptions.TopBorder.BorderColor = System.Drawing.Color.Silver;
+            this.MaxMoveWindows.BorderOptions.TopBorder.BorderThickness = 1;
+            this.MaxMoveWindows.BorderOptions.TopBorder.ShowBorder = true;
+            this.MaxMoveWindows.ContainerControl = this;
+            this.MaxMoveWindows.DockingIndicatorsColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.MaxMoveWindows.DockingIndicatorsOpacity = 0.5D;
+            this.MaxMoveWindows.DockingOptions.DockAll = true;
+            this.MaxMoveWindows.DockingOptions.DockBottomLeft = true;
+            this.MaxMoveWindows.DockingOptions.DockBottomRight = true;
+            this.MaxMoveWindows.DockingOptions.DockFullScreen = true;
+            this.MaxMoveWindows.DockingOptions.DockLeft = true;
+            this.MaxMoveWindows.DockingOptions.DockRight = true;
+            this.MaxMoveWindows.DockingOptions.DockTopLeft = true;
+            this.MaxMoveWindows.DockingOptions.DockTopRight = true;
+            this.MaxMoveWindows.FormDraggingOpacity = 0.9D;
+            this.MaxMoveWindows.ParentForm = this;
+            this.MaxMoveWindows.ShowCursorChanges = true;
+            this.MaxMoveWindows.ShowDockingIndicators = true;
+            this.MaxMoveWindows.TitleBarOptions.AllowFormDragging = true;
+            this.MaxMoveWindows.TitleBarOptions.BunifuFormDock = this.MaxMoveWindows;
+            this.MaxMoveWindows.TitleBarOptions.DoubleClickToExpandWindow = true;
+            this.MaxMoveWindows.TitleBarOptions.TitleBarControl = this.Header;
+            this.MaxMoveWindows.TitleBarOptions.UseBackColorOnDockingIndicators = true;
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimizar.Image = global::ejemplo.Properties.Resources.minimizar_signo;
+            this.btnMinimizar.Location = new System.Drawing.Point(581, 3);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(24, 19);
+            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMinimizar.TabIndex = 9;
+            this.btnMinimizar.TabStop = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            // 
+            // bunifuPictureBox1
+            // 
+            this.bunifuPictureBox1.AllowFocused = false;
+            this.bunifuPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuPictureBox1.AutoSizeHeight = true;
+            this.bunifuPictureBox1.BorderRadius = 32;
+            this.bunifuPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox1.Image")));
+            this.bunifuPictureBox1.IsCircle = true;
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(16, 11);
+            this.bunifuPictureBox1.Name = "bunifuPictureBox1";
+            this.bunifuPictureBox1.Size = new System.Drawing.Size(64, 64);
+            this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuPictureBox1.TabIndex = 6;
+            this.bunifuPictureBox1.TabStop = false;
+            this.bunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Poppins Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label1.Location = new System.Drawing.Point(86, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 34);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Usuario";
+            // 
+            // lblTipoUser
+            // 
+            this.lblTipoUser.AutoSize = true;
+            this.lblTipoUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblTipoUser.Font = new System.Drawing.Font("Poppins Medium", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lblTipoUser.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblTipoUser.Location = new System.Drawing.Point(86, 49);
+            this.lblTipoUser.Name = "lblTipoUser";
+            this.lblTipoUser.Size = new System.Drawing.Size(107, 26);
+            this.lblTipoUser.TabIndex = 8;
+            this.lblTipoUser.Text = "Propietario";
+            // 
+            // Inidicador
+            // 
+            this.Inidicador.Angle = 0F;
+            this.Inidicador.BackColor = System.Drawing.Color.Transparent;
+            this.Inidicador.BorderColor = System.Drawing.Color.Silver;
+            this.Inidicador.BorderThickness = 2;
+            this.Inidicador.FillColor = System.Drawing.Color.Silver;
+            this.Inidicador.FillShape = true;
+            this.Inidicador.Location = new System.Drawing.Point(29, 108);
+            this.Inidicador.Name = "Inidicador";
+            this.Inidicador.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Polygon;
+            this.Inidicador.Sides = 3;
+            this.Inidicador.Size = new System.Drawing.Size(10, 11);
+            this.Inidicador.TabIndex = 9;
+            // 
+            // bunifuShapes2
+            // 
+            this.bunifuShapes2.Angle = 90F;
+            this.bunifuShapes2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuShapes2.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuShapes2.BorderThickness = 3;
+            this.bunifuShapes2.FillColor = System.Drawing.Color.Transparent;
+            this.bunifuShapes2.FillShape = true;
+            this.bunifuShapes2.Location = new System.Drawing.Point(25, 101);
+            this.bunifuShapes2.Name = "bunifuShapes2";
+            this.bunifuShapes2.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Line;
+            this.bunifuShapes2.Sides = 5;
+            this.bunifuShapes2.Size = new System.Drawing.Size(18, 99);
+            this.bunifuShapes2.TabIndex = 10;
+            this.bunifuShapes2.Text = "bunifuShapes2";
             // 
             // Inicio
             // 
+            this.AllowStatusStripMerge = false;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(916, 475);
             this.Controls.Add(this.panelContenedor);
@@ -389,8 +502,7 @@ namespace ejemplo
             this.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.StateCommon.Border.Rounding = 17;
+            this.StateCommon.Border.Rounding = 0;
             this.Text = "Inicioo";
             this.Load += new System.EventHandler(this.Inicio_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Inicio_MouseDown);
@@ -408,8 +520,10 @@ namespace ejemplo
             ((System.ComponentModel.ISupportInitialize)(this.btnStateNormal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrarApp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             this.panelContenedor.ResumeLayout(false);
+            this.Header.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -420,7 +534,6 @@ namespace ejemplo
 
         private System.Windows.Forms.PictureBox btnMaximizar;
         private System.Windows.Forms.PictureBox btnCerrarApp;
-        private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.Panel MenuV;
         private System.Windows.Forms.Label btnSentting;
         private System.Windows.Forms.Label btmImport;
@@ -438,7 +551,14 @@ namespace ejemplo
         private System.Windows.Forms.Label lblTituloCancion;
         private System.Windows.Forms.PictureBox btnLoop;
         private System.Windows.Forms.PictureBox btnAleatorio;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox BusquedaBar;
         private Panel panelContenedor;
+        private Panel Header;
+        private Bunifu.UI.WinForms.BunifuFormDock MaxMoveWindows;
+        private PictureBox btnMinimizar;
+        private Bunifu.UI.WinForms.BunifuShapes Inidicador;
+        private Label lblTipoUser;
+        private Label label1;
+        private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox1;
+        private Bunifu.UI.WinForms.BunifuShapes bunifuShapes2;
     }
 }
