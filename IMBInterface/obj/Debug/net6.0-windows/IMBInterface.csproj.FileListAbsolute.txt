@@ -1,0 +1,8 @@
+C:\Users\rijob\Desktop\Int prg\IMBSolution\IMBInterface\obj\Debug\net6.0-windows\IMBInterface.csproj.AssemblyReference.cache
+C:\Users\rijob\Desktop\Int prg\IMBSolution\IMBInterface\obj\Debug\net6.0-windows\IMBInterface.Inicio.resources
+C:\Users\rijob\Desktop\Int prg\IMBSolution\IMBInterface\obj\Debug\net6.0-windows\IMBInterface.csproj.GenerateResource.cache
+C:\Users\rijob\Desktop\Int prg\IMBSolution\IMBInterface\obj\Debug\net6.0-windows\IMBInterface.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rijob\Desktop\Int prg\IMBSolution\IMBInterface\obj\Debug\net6.0-windows\IMBInterface.AssemblyInfoInputs.cache
+C:\Users\rijob\Desktop\Int prg\IMBSolution\IMBInterface\obj\Debug\net6.0-windows\IMBInterface.AssemblyInfo.cs
+C:\Users\rijob\Desktop\Int prg\IMBSolution\IMBInterface\obj\Debug\net6.0-windows\IMBInterface.csproj.CoreCompileInputs.cache
+C:\Users\rijob\Desktop\Int prg\IMBSolution\IMBInterface\obj\Debug\net6.0-windows\IMBInterface.sssss.resources

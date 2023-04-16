@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33502.453
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMB", "ejemplo\IMB.csproj", "{DBEE1BEC-B438-47F8-ABA0-BB3010B1F257}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicPlayerYT", "MusicPlayerYT\MusicPlayerYT.csproj", "{2F4F1467-37BB-40A3-8551-F26F0FD53B20}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DBEE1BEC-B438-47F8-ABA0-BB3010B1F257}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBEE1BEC-B438-47F8-ABA0-BB3010B1F257}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBEE1BEC-B438-47F8-ABA0-BB3010B1F257}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBEE1BEC-B438-47F8-ABA0-BB3010B1F257}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F4F1467-37BB-40A3-8551-F26F0FD53B20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F4F1467-37BB-40A3-8551-F26F0FD53B20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F4F1467-37BB-40A3-8551-F26F0FD53B20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F4F1467-37BB-40A3-8551-F26F0FD53B20}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {03E94854-F6A0-4FFE-955F-D3B155A07A40}
+	EndGlobalSection
+EndGlobal

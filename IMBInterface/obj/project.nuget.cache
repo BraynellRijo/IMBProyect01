@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "fWTuBKB151cQz01ayvCI8NV9+5cX+kF7sk0unH43/MmRtVkOYy+7hdcwZgjnUjz/A6uCEpC4spw5cOvGRqRRwA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\rijob\\Desktop\\Int prg\\IMBSolution\\IMBInterface\\IMBInterface.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rijob\\.nuget\\packages\\krypton.toolkit\\70.22.11.312\\krypton.toolkit.70.22.11.312.nupkg.sha512",
+    "C:\\Users\\rijob\\.nuget\\packages\\krypton.toolkit.suite.extended.drawing\\70.23.1.5\\krypton.toolkit.suite.extended.drawing.70.23.1.5.nupkg.sha512"
+  ],
+  "logs": []
+}
