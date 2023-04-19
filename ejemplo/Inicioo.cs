@@ -13,7 +13,9 @@ using ComponentFactory.Krypton.Toolkit;
 using WMPLib;
 using AxWMPLib;
 using ejemplo.Resources;
-using MusicPlayerYT;
+
+using DevExpress.Utils.CommonDialogs;
+using System.IO;
 
 namespace ejemplo
 {
@@ -62,56 +64,64 @@ namespace ejemplo
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
-            //if (!isPlaying)
-            //{
+            if (!isPlaying)
+            {
 
-            //    axWindowsMediaPlayer1.Ctlcontrols.pause();
-            //    isPlaying = true;
+                axWindowsMediaPlayer.Ctlcontrols.pause();
+                isPlaying = true;
 
-
-
-            //    Point posicionActual = btnPlay.Location;
-
-
-            //    posicionActual.X += 0;
-            //    posicionActual.Y += 0;
-            //    btnPlay.Location = posicionActual;
+            
+                btnPlay.Size = new Size(47, 50);
+                btnPlay.BackColor = Color.Transparent;
+                btnPlay.SizeMode = PictureBoxSizeMode.CenterImage;
 
 
-            //}
+                Point posicionActual = btnPlay.Location;
 
-            //else
-            //{
-            //    isPlaying = false;
-            //    axWindowsMediaPlayer1.Ctlcontrols.play();
 
-            //} 
+                posicionActual.X += 0;
+                posicionActual.Y += 0;
+                btnPlay.Location = posicionActual;
+                btnPlay.BackColor = Color.Transparent;
+
+
+            }
+
+            else
+            {
+                isPlaying = false;
+                axWindowsMediaPlayer.Ctlcontrols.play();
+                btnPlay.Image = Properties.Resources.play_button_arrowhead;
+                btnPlay.Size = new Size(47, 50);
+                btnPlay.SizeMode = PictureBoxSizeMode.CenterImage;
+            }
         }
 
 
 
         private void btnSkip_Click(object sender, EventArgs e)
         {
-            //int selectedIndex = Listado.SelectedIndex;
+            int selectedIndex = ListMs.SelectedIndex;
 
 
-            //if (Listado.Items.Count > 0 && selectedIndex < Listado.Items.Count - 1)
-            //{
+            if (ListMs.Items.Count > 0 && selectedIndex < ListMs.Items.Count - 1)
+            {
 
-            //    Listado.SelectedIndex = selectedIndex + 1;
-            //}
+                ListMs.SelectedIndex = selectedIndex + 1;
+            }
         }
 
         private void btnRewind_Click(object sender, EventArgs e)
         {
-            //int selectedIndex = Listado.SelectedIndex;
+            int selectedIndex = ListMs.SelectedIndex;
 
 
-            //if (Listado.Items.Count > 0 && selectedIndex < Listado.Items.Count - 1)
-            //{
+            if (ListMs.Items.Count > 0 && selectedIndex < ListMs.Items.Count - 1)
+            {
 
-            //    Listado.SelectedIndex = selectedIndex - 1;
-            //}
+                ListMs.SelectedIndex = selectedIndex - 1;
+
+            }
         }
 
         private void ImgCancion_Click(object sender, EventArgs e)
@@ -141,63 +151,51 @@ namespace ejemplo
             Indicador.Top = btnInicio.Top + 10;
         }
 
-        //string[] archivo, ruta;
-        //private void Listado_MouseClick(object sender, MouseEventArgs e)
-        //{
-        //    openFileDialog.Multiselect = true;
+        string[] archivo, ruta;
+        private void btnSubir_MouseClick(object sender, MouseEventArgs e)
+        {
+            SubirMs.Multiselect = true;
+            if (SubirMs.ShowDialog() == DialogResult.OK)
+            {
+                archivo = SubirMs.SafeFileNames;
+                ruta = SubirMs.FileNames;
 
-        //    if (openFileDialog.ShowDialog() == DialogResult.OK)
-        //    {
-        //        archivo = openFileDialog.SafeFileNames;
-        //        ruta = openFileDialog.FileNames;
+                foreach (string path in ruta)
+                {
+                    WindowsMediaPlayer player = new WindowsMediaPlayer();
+                    IWMPMedia media = player.newMedia(path);
+                    TimeSpan duration = TimeSpan.FromSeconds(media.duration);
 
-        //        for (int i = 0; i < archivo.Length; i++)
-        //        {
+                    ListMs.Items.Add(Path.GetFileName(path));
+                }
+            }
+        }
 
-        //            Listado.Items.Add(archivo[i]);
-        //        }
-        //    }
-        //}
-        //private readonly AxWindowsMediaPlayer mediaPlayer = new AxWindowsMediaPlayer();
-        //private bool isPlaying = false;
+        private readonly AxWindowsMediaPlayer mediaPlayer = new AxWindowsMediaPlayer();
+        private bool isPlaying = false;
 
-        //private void Listado_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    int selectedIndex = Listado.SelectedIndex;
-        //    if (selectedIndex >= 0 && selectedIndex < ruta.Length)
-        //    {
+        private void ListMs_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selectedIndex = ListMs.SelectedIndex;
+            if (selectedIndex >= 0 && selectedIndex < ruta.Length)
+            {
 
-        //        string selectedFilePath = ruta[selectedIndex];
-        //        axWindowsMediaPlayer1.URL = selectedFilePath;
+                string selectedFilePath = ruta[selectedIndex];
+                axWindowsMediaPlayer.URL = selectedFilePath;
 
-        //        isPlaying = false;
-        //        axWindowsMediaPlayer1.Ctlcontrols.play();
+                isPlaying = false;
+                axWindowsMediaPlayer.Ctlcontrols.play();
 
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("El índice seleccionado está fuera de los límites de la matriz.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //}
-
-        //private void Listado_SelectedIndexChanged_1(object sender, EventArgs e)
-        //{
-        //    int selectedIndex = Listado.SelectedIndex;
-        //    if (selectedIndex >= 0 && selectedIndex < ruta.Length)
-        //    {
-
-        //        string selectedFilePath = ruta[selectedIndex];
-        //        axWindowsMediaPlayer1.URL = selectedFilePath;
-
-        //        isPlaying = false;
-        //        axWindowsMediaPlayer1.Ctlcontrols.play();
-
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("El índice seleccionado está fuera de los límites de la matriz.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //}
+                btnPlay.Image = Properties.Resources.play_button_arrowhead;
+                btnPlay.Size = new Size(47, 50);
+                btnPlay.SizeMode = PictureBoxSizeMode.CenterImage;
+                btnPlay.BackColor = Color.Transparent;
+            }
+            else
+            {
+                MessageBox.Show("El índice seleccionado está fuera de los límites de la matriz.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
 
         private void btnAlbum_Click(object sender, EventArgs e)
@@ -244,14 +242,17 @@ namespace ejemplo
         private bool ImagenOriginal = true;
         private void btnAleatorio_Click(object sender, EventArgs e)
         {
+
+
             if (ImagenOriginal)
             {
-                btnAleatorio.Image = Properties.Resources.aleatorioVerde;
+                Aleatorio.Image = Properties.Resources.aleatorioVerde;
                 ImagenOriginal = false;
+
             }
             else
             {
-                btnAleatorio.Image = Properties.Resources.aleatorio;
+                Aleatorio.Image = Properties.Resources.aleatorio;
                 ImagenOriginal = true;
             }
         }
@@ -271,15 +272,6 @@ namespace ejemplo
             }
         }
 
-
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MusicPlayerYT.MediaPlayer form = new MusicPlayerYT.MediaPlayer();
-            form.Show();
-            this.Hide();
-
-        }
         private void BusquedaBar_Enter(object sender, EventArgs e)
         {
             if (BusquedaBar.Text == "Buscar...")
@@ -297,6 +289,78 @@ namespace ejemplo
                 BusquedaBar.Text = "Buscar...";
                 BusquedaBar.ForeColor = Color.FromArgb(64, 64, 64);
             }
+        }
+
+        private void BarraProgress_Scroll(object sender, Utilities.BunifuSlider.BunifuHScrollBar.ScrollEventArgs e)
+        {
+            if (axWindowsMediaPlayer.playState == WMPLib.WMPPlayState.wmppsPlaying) // asegúrate de que la canción se esté reproduciendo
+            {
+                axWindowsMediaPlayer.Ctlcontrols.pause(); // pausa la reproducción de la canción
+                axWindowsMediaPlayer.Ctlcontrols.currentPosition = BarraProgress.Value; // establece la posición de la canción en función del valor de la TrackBar
+                axWindowsMediaPlayer.Ctlcontrols.play(); // reinicia la reproducción de la canción
+            }
+        }
+        private void axWindowsMediaPlayer1_StatusChange(object sender, EventArgs e)
+        {
+            if (axWindowsMediaPlayer.playState == WMPLib.WMPPlayState.wmppsPlaying)
+            {
+
+                BarraProgress.Maximum = (int)axWindowsMediaPlayer.Ctlcontrols.currentItem.duration;
+                timer.Start();
+
+            }
+            else if (axWindowsMediaPlayer.playState == WMPLib.WMPPlayState.wmppsPaused)
+            {
+                timer.Stop();
+
+            }
+
+            else if (axWindowsMediaPlayer.playState == WMPLib.WMPPlayState.wmppsStopped)
+            {
+                timer.Stop();
+                BarraProgress.Value = 0;
+            }
+        }
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            CountMs.Text = axWindowsMediaPlayer.Ctlcontrols.currentPositionString;
+            DurationCanc.Text = axWindowsMediaPlayer.Ctlcontrols.currentItem.durationString.ToString();
+
+            if (axWindowsMediaPlayer.playState == WMPLib.WMPPlayState.wmppsPlaying)
+            {
+                BarraProgress.Value = (int)axWindowsMediaPlayer.Ctlcontrols.currentPosition;
+
+            }
+        }
+
+        private void PagInicio_Click(object sender, EventArgs e)
+        {
+
+        }
+     
+        private void Aleatorio_Click(object sender, EventArgs e)
+        {
+            Random random = new Random();
+            int index = random.Next(ListMs.Items.Count);
+            ListMs.SelectedIndex = index;
+        }
+
+        private void btnAleatorioList_Click(object sender, EventArgs e)
+        {
+            Random random = new Random();
+            int index = random.Next(ListMs.Items.Count);
+            ListMs.SelectedIndex = index;
+        }
+
+        private void lblTituloCancion_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void CountMs_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void BarraReproduccion_Paint(object sender, PaintEventArgs e)

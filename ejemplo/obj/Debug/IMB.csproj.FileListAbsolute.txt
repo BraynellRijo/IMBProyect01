@@ -19,7 +19,6 @@ C:\Users\rijob\Desktop\Int prg\IMBSolution\ejemplo\obj\Debug\Interop.WMPLib.dll
 C:\Users\rijob\Desktop\Int prg\IMBSolution\ejemplo\obj\Debug\AxInterop.WMPLib.dll
 C:\Users\rijob\Desktop\Int prg\IMBSolution\ejemplo\obj\Debug\IMB.csproj.ResolveComReference.cache
 C:\Users\rijob\Desktop\Int prg\IMBSolution\ejemplo\obj\Debug\ejemplo.Resources.Albumes.resources
-C:\Users\rijob\Desktop\Int prg\IMBSolution\ejemplo\bin\Debug\MusicPlayerYT.exe.config
 C:\Users\rijob\Desktop\Int prg\IMBSolution\ejemplo\bin\Debug\libHarfBuzzSharp.dylib
 C:\Users\rijob\Desktop\Int prg\IMBSolution\ejemplo\bin\Debug\x86\libHarfBuzzSharp.dll
 C:\Users\rijob\Desktop\Int prg\IMBSolution\ejemplo\bin\Debug\x64\libHarfBuzzSharp.dll

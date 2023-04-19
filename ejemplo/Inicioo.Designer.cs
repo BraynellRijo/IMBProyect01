@@ -33,10 +33,7 @@ namespace ejemplo
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
-            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation2 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation1 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
             this.MenuV = new System.Windows.Forms.Panel();
             this.Indicador = new Bunifu.UI.WinForms.BunifuShapes();
             this.lblTipoUser = new System.Windows.Forms.Label();
@@ -50,30 +47,36 @@ namespace ejemplo
             this.bunifuShapes2 = new Bunifu.UI.WinForms.BunifuShapes();
             this.bunifuShapes1 = new Bunifu.UI.WinForms.BunifuShapes();
             this.BarraReproduccion = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.btnAleatorio = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.btnLoop = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.btnrewind = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.btnSkip = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.btnPlay = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.btnLoop = new System.Windows.Forms.PictureBox();
+            this.btnAleatorio = new System.Windows.Forms.PictureBox();
+            this.btnSkip = new System.Windows.Forms.PictureBox();
+            this.btnRewind = new System.Windows.Forms.PictureBox();
+            this.btnPlay = new System.Windows.Forms.PictureBox();
+            this.DurationCanc = new System.Windows.Forms.Label();
+            this.CountMs = new System.Windows.Forms.Label();
+            this.Aleatorio = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.Loop = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.rewind = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.Play = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.Skip = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.BarraProgress = new Bunifu.UI.WinForms.BunifuHSlider();
             this.lblArtista = new System.Windows.Forms.Label();
             this.lblTituloCancion = new System.Windows.Forms.Label();
             this.ImgCancion = new System.Windows.Forms.PictureBox();
-            this.btnCerrarApp = new System.Windows.Forms.PictureBox();
             this.Header = new System.Windows.Forms.Panel();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
+            this.btnCerrarApp = new System.Windows.Forms.PictureBox();
             this.MaxMoveWindows = new Bunifu.UI.WinForms.BunifuFormDock();
             this.PagContain = new Bunifu.UI.WinForms.BunifuPages();
             this.PagInicio = new System.Windows.Forms.TabPage();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.PagList = new System.Windows.Forms.TabPage();
+            this.axWindowsMediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
+            this.btnAleatorioList = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.ListMs = new ComponentFactory.Krypton.Toolkit.KryptonListBox();
             this.BusquedaBar = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.btnSubir = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.ListMs = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.NumberCanc = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn();
-            this.NombreCanc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ArtistCanc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DuracionCanc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnAleatorioList = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -82,12 +85,12 @@ namespace ejemplo
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.Album1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.Album1 = new System.Windows.Forms.PictureBox();
             this.PagImportC = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
             this.btnSubirDrive = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -108,29 +111,36 @@ namespace ejemplo
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.bunifuHSlider1 = new Bunifu.UI.WinForms.BunifuHSlider();
+            this.SubirMs = new System.Windows.Forms.OpenFileDialog();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.MenuV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BarraReproduccion)).BeginInit();
             this.BarraReproduccion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLoop)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAleatorio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSkip)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRewind)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPlay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgCancion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrarApp)).BeginInit();
             this.Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrarApp)).BeginInit();
             this.PagContain.SuspendLayout();
             this.PagInicio.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.PagList.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ListMs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.PagPistas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Album1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Album1)).BeginInit();
             this.PagImportC.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -297,11 +307,11 @@ namespace ejemplo
             this.bunifuShapes2.BorderThickness = 3;
             this.bunifuShapes2.FillColor = System.Drawing.Color.Transparent;
             this.bunifuShapes2.FillShape = true;
-            this.bunifuShapes2.Location = new System.Drawing.Point(25, 101);
+            this.bunifuShapes2.Location = new System.Drawing.Point(25, 108);
             this.bunifuShapes2.Name = "bunifuShapes2";
             this.bunifuShapes2.Shape = Bunifu.UI.WinForms.BunifuShapes.Shapes.Line;
             this.bunifuShapes2.Sides = 5;
-            this.bunifuShapes2.Size = new System.Drawing.Size(18, 99);
+            this.bunifuShapes2.Size = new System.Drawing.Size(18, 92);
             this.bunifuShapes2.TabIndex = 10;
             this.bunifuShapes2.Text = "bunifuShapes2";
             // 
@@ -324,18 +334,26 @@ namespace ejemplo
             // BarraReproduccion
             // 
             this.BarraReproduccion.AutoSize = true;
-            this.BarraReproduccion.Controls.Add(this.bunifuHSlider1);
+            this.BarraReproduccion.Controls.Add(this.btnLoop);
             this.BarraReproduccion.Controls.Add(this.btnAleatorio);
+            this.BarraReproduccion.Controls.Add(this.btnSkip);
+            this.BarraReproduccion.Controls.Add(this.btnRewind);
+            this.BarraReproduccion.Controls.Add(this.btnPlay);
+            this.BarraReproduccion.Controls.Add(this.DurationCanc);
+            this.BarraReproduccion.Controls.Add(this.CountMs);
+            this.BarraReproduccion.Controls.Add(this.Aleatorio);
+            this.BarraReproduccion.Controls.Add(this.Loop);
+            this.BarraReproduccion.Controls.Add(this.rewind);
+            this.BarraReproduccion.Controls.Add(this.Play);
+            this.BarraReproduccion.Controls.Add(this.Skip);
+            this.BarraReproduccion.Controls.Add(this.BarraProgress);
             this.BarraReproduccion.Controls.Add(this.lblArtista);
             this.BarraReproduccion.Controls.Add(this.lblTituloCancion);
-            this.BarraReproduccion.Controls.Add(this.btnLoop);
             this.BarraReproduccion.Controls.Add(this.ImgCancion);
-            this.BarraReproduccion.Controls.Add(this.btnrewind);
-            this.BarraReproduccion.Controls.Add(this.btnPlay);
-            this.BarraReproduccion.Controls.Add(this.btnSkip);
             this.BarraReproduccion.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.BarraReproduccion.Location = new System.Drawing.Point(0, 390);
             this.BarraReproduccion.Name = "BarraReproduccion";
+            this.BarraReproduccion.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ButtonStandalone;
             this.BarraReproduccion.Size = new System.Drawing.Size(916, 102);
             this.BarraReproduccion.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(9)))));
             this.BarraReproduccion.StateCommon.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(0)))));
@@ -344,180 +362,320 @@ namespace ejemplo
             this.BarraReproduccion.TabIndex = 5;
             this.BarraReproduccion.Paint += new System.Windows.Forms.PaintEventHandler(this.BarraReproduccion_Paint);
             // 
-            // btnAleatorio
-            // 
-            this.btnAleatorio.ActiveImage = null;
-            this.btnAleatorio.AllowAnimations = true;
-            this.btnAleatorio.AllowBuffering = false;
-            this.btnAleatorio.AllowToggling = false;
-            this.btnAleatorio.AllowZooming = true;
-            this.btnAleatorio.AllowZoomingOnFocus = false;
-            this.btnAleatorio.BackColor = System.Drawing.Color.Transparent;
-            this.btnAleatorio.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnAleatorio.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnAleatorio.ErrorImage")));
-            this.btnAleatorio.FadeWhenInactive = false;
-            this.btnAleatorio.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.btnAleatorio.Image = ((System.Drawing.Image)(resources.GetObject("btnAleatorio.Image")));
-            this.btnAleatorio.ImageActive = null;
-            this.btnAleatorio.ImageLocation = null;
-            this.btnAleatorio.ImageMargin = 5;
-            this.btnAleatorio.ImageSize = new System.Drawing.Size(25, 27);
-            this.btnAleatorio.ImageZoomSize = new System.Drawing.Size(30, 32);
-            this.btnAleatorio.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnAleatorio.InitialImage")));
-            this.btnAleatorio.Location = new System.Drawing.Point(155, 58);
-            this.btnAleatorio.Name = "btnAleatorio";
-            this.btnAleatorio.Rotation = 0;
-            this.btnAleatorio.ShowActiveImage = true;
-            this.btnAleatorio.ShowCursorChanges = true;
-            this.btnAleatorio.ShowImageBorders = true;
-            this.btnAleatorio.ShowSizeMarkers = false;
-            this.btnAleatorio.Size = new System.Drawing.Size(30, 32);
-            this.btnAleatorio.TabIndex = 13;
-            this.btnAleatorio.ToolTipText = "";
-            this.btnAleatorio.WaitOnLoad = false;
-            this.btnAleatorio.Zoom = 5;
-            this.btnAleatorio.ZoomSpeed = 10;
-            this.btnAleatorio.Click += new System.EventHandler(this.btnAleatorio_Click);
-            // 
             // btnLoop
             // 
-            this.btnLoop.ActiveImage = null;
-            this.btnLoop.AllowAnimations = true;
-            this.btnLoop.AllowBuffering = false;
-            this.btnLoop.AllowToggling = false;
-            this.btnLoop.AllowZooming = true;
-            this.btnLoop.AllowZoomingOnFocus = false;
             this.btnLoop.BackColor = System.Drawing.Color.Transparent;
-            this.btnLoop.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnLoop.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnLoop.ErrorImage")));
-            this.btnLoop.FadeWhenInactive = false;
-            this.btnLoop.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.btnLoop.Image = ((System.Drawing.Image)(resources.GetObject("btnLoop.Image")));
-            this.btnLoop.ImageActive = null;
-            this.btnLoop.ImageLocation = null;
-            this.btnLoop.ImageMargin = 5;
-            this.btnLoop.ImageSize = new System.Drawing.Size(25, 27);
-            this.btnLoop.ImageZoomSize = new System.Drawing.Size(30, 32);
-            this.btnLoop.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnLoop.InitialImage")));
-            this.btnLoop.Location = new System.Drawing.Point(331, 58);
+            this.btnLoop.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLoop.Image = global::ejemplo.Properties.Resources.loop;
+            this.btnLoop.Location = new System.Drawing.Point(671, 14);
             this.btnLoop.Name = "btnLoop";
-            this.btnLoop.Rotation = 0;
-            this.btnLoop.ShowActiveImage = true;
-            this.btnLoop.ShowCursorChanges = true;
-            this.btnLoop.ShowImageBorders = true;
-            this.btnLoop.ShowSizeMarkers = false;
             this.btnLoop.Size = new System.Drawing.Size(30, 32);
-            this.btnLoop.TabIndex = 12;
-            this.btnLoop.ToolTipText = "";
-            this.btnLoop.WaitOnLoad = false;
-            this.btnLoop.Zoom = 5;
-            this.btnLoop.ZoomSpeed = 10;
+            this.btnLoop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnLoop.TabIndex = 21;
+            this.btnLoop.TabStop = false;
+            this.btnLoop.Visible = false;
+            this.btnLoop.WaitOnLoad = true;
             this.btnLoop.Click += new System.EventHandler(this.btnLoop_Click);
             // 
-            // btnrewind
+            // btnAleatorio
             // 
-            this.btnrewind.ActiveImage = null;
-            this.btnrewind.AllowAnimations = true;
-            this.btnrewind.AllowBuffering = false;
-            this.btnrewind.AllowToggling = false;
-            this.btnrewind.AllowZooming = true;
-            this.btnrewind.AllowZoomingOnFocus = false;
-            this.btnrewind.BackColor = System.Drawing.Color.Transparent;
-            this.btnrewind.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnrewind.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnrewind.ErrorImage")));
-            this.btnrewind.FadeWhenInactive = false;
-            this.btnrewind.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.btnrewind.Image = ((System.Drawing.Image)(resources.GetObject("btnrewind.Image")));
-            this.btnrewind.ImageActive = null;
-            this.btnrewind.ImageLocation = null;
-            this.btnrewind.ImageMargin = 5;
-            this.btnrewind.ImageSize = new System.Drawing.Size(33, 33);
-            this.btnrewind.ImageZoomSize = new System.Drawing.Size(38, 38);
-            this.btnrewind.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnrewind.InitialImage")));
-            this.btnrewind.Location = new System.Drawing.Point(191, 52);
-            this.btnrewind.Name = "btnrewind";
-            this.btnrewind.Rotation = 0;
-            this.btnrewind.ShowActiveImage = true;
-            this.btnrewind.ShowCursorChanges = true;
-            this.btnrewind.ShowImageBorders = true;
-            this.btnrewind.ShowSizeMarkers = false;
-            this.btnrewind.Size = new System.Drawing.Size(38, 38);
-            this.btnrewind.TabIndex = 11;
-            this.btnrewind.ToolTipText = "";
-            this.btnrewind.WaitOnLoad = false;
-            this.btnrewind.Zoom = 5;
-            this.btnrewind.ZoomSpeed = 10;
-            this.btnrewind.Click += new System.EventHandler(this.btnRewind_Click);
+            this.btnAleatorio.BackColor = System.Drawing.Color.Transparent;
+            this.btnAleatorio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAleatorio.Image = global::ejemplo.Properties.Resources.aleatorio;
+            this.btnAleatorio.Location = new System.Drawing.Point(503, 14);
+            this.btnAleatorio.Name = "btnAleatorio";
+            this.btnAleatorio.Size = new System.Drawing.Size(30, 32);
+            this.btnAleatorio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnAleatorio.TabIndex = 20;
+            this.btnAleatorio.TabStop = false;
+            this.btnAleatorio.Visible = false;
+            this.btnAleatorio.Click += new System.EventHandler(this.btnAleatorio_Click);
             // 
             // btnSkip
             // 
-            this.btnSkip.ActiveImage = null;
-            this.btnSkip.AllowAnimations = true;
-            this.btnSkip.AllowBuffering = false;
-            this.btnSkip.AllowToggling = false;
-            this.btnSkip.AllowZooming = true;
-            this.btnSkip.AllowZoomingOnFocus = false;
             this.btnSkip.BackColor = System.Drawing.Color.Transparent;
-            this.btnSkip.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnSkip.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnSkip.ErrorImage")));
-            this.btnSkip.FadeWhenInactive = false;
-            this.btnSkip.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.btnSkip.Image = ((System.Drawing.Image)(resources.GetObject("btnSkip.Image")));
-            this.btnSkip.ImageActive = null;
-            this.btnSkip.ImageLocation = null;
-            this.btnSkip.ImageMargin = 5;
-            this.btnSkip.ImageSize = new System.Drawing.Size(33, 33);
-            this.btnSkip.ImageZoomSize = new System.Drawing.Size(38, 38);
-            this.btnSkip.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnSkip.InitialImage")));
-            this.btnSkip.Location = new System.Drawing.Point(287, 52);
+            this.btnSkip.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSkip.Image = global::ejemplo.Properties.Resources.skip;
+            this.btnSkip.Location = new System.Drawing.Point(627, 8);
             this.btnSkip.Name = "btnSkip";
-            this.btnSkip.Rotation = 0;
-            this.btnSkip.ShowActiveImage = true;
-            this.btnSkip.ShowCursorChanges = true;
-            this.btnSkip.ShowImageBorders = true;
-            this.btnSkip.ShowSizeMarkers = false;
             this.btnSkip.Size = new System.Drawing.Size(38, 38);
-            this.btnSkip.TabIndex = 10;
-            this.btnSkip.ToolTipText = "";
-            this.btnSkip.WaitOnLoad = false;
-            this.btnSkip.Zoom = 5;
-            this.btnSkip.ZoomSpeed = 10;
+            this.btnSkip.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnSkip.TabIndex = 19;
+            this.btnSkip.TabStop = false;
+            this.btnSkip.Visible = false;
+            this.btnSkip.WaitOnLoad = true;
             this.btnSkip.Click += new System.EventHandler(this.btnSkip_Click);
+            // 
+            // btnRewind
+            // 
+            this.btnRewind.BackColor = System.Drawing.Color.Transparent;
+            this.btnRewind.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRewind.Image = global::ejemplo.Properties.Resources.rewind_button;
+            this.btnRewind.Location = new System.Drawing.Point(539, 8);
+            this.btnRewind.Name = "btnRewind";
+            this.btnRewind.Size = new System.Drawing.Size(38, 38);
+            this.btnRewind.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnRewind.TabIndex = 18;
+            this.btnRewind.TabStop = false;
+            this.btnRewind.Visible = false;
+            this.btnRewind.Click += new System.EventHandler(this.btnRewind_Click);
             // 
             // btnPlay
             // 
-            this.btnPlay.ActiveImage = null;
-            this.btnPlay.AllowAnimations = true;
-            this.btnPlay.AllowBuffering = false;
-            this.btnPlay.AllowToggling = false;
-            this.btnPlay.AllowZooming = true;
-            this.btnPlay.AllowZoomingOnFocus = false;
             this.btnPlay.BackColor = System.Drawing.Color.Transparent;
-            this.btnPlay.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnPlay.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnPlay.ErrorImage")));
-            this.btnPlay.FadeWhenInactive = false;
-            this.btnPlay.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.btnPlay.Image = ((System.Drawing.Image)(resources.GetObject("btnPlay.Image")));
-            this.btnPlay.ImageActive = null;
-            this.btnPlay.ImageLocation = null;
-            this.btnPlay.ImageMargin = 5;
-            this.btnPlay.ImageSize = new System.Drawing.Size(33, 33);
-            this.btnPlay.ImageZoomSize = new System.Drawing.Size(38, 38);
-            this.btnPlay.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnPlay.InitialImage")));
-            this.btnPlay.Location = new System.Drawing.Point(239, 52);
+            this.btnPlay.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPlay.Image = global::ejemplo.Properties.Resources.play_button_arrowhead;
+            this.btnPlay.Location = new System.Drawing.Point(583, 8);
             this.btnPlay.Name = "btnPlay";
-            this.btnPlay.Rotation = 0;
-            this.btnPlay.ShowActiveImage = true;
-            this.btnPlay.ShowCursorChanges = true;
-            this.btnPlay.ShowImageBorders = true;
-            this.btnPlay.ShowSizeMarkers = false;
             this.btnPlay.Size = new System.Drawing.Size(38, 38);
-            this.btnPlay.TabIndex = 9;
-            this.btnPlay.ToolTipText = "";
-            this.btnPlay.WaitOnLoad = false;
-            this.btnPlay.Zoom = 5;
-            this.btnPlay.ZoomSpeed = 10;
+            this.btnPlay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnPlay.TabIndex = 17;
+            this.btnPlay.TabStop = false;
+            this.btnPlay.Visible = false;
             this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
+            // 
+            // DurationCanc
+            // 
+            this.DurationCanc.AutoSize = true;
+            this.DurationCanc.BackColor = System.Drawing.Color.Transparent;
+            this.DurationCanc.Location = new System.Drawing.Point(863, 80);
+            this.DurationCanc.Name = "DurationCanc";
+            this.DurationCanc.Size = new System.Drawing.Size(34, 13);
+            this.DurationCanc.TabIndex = 16;
+            this.DurationCanc.Text = "00:00";
+            // 
+            // CountMs
+            // 
+            this.CountMs.AutoSize = true;
+            this.CountMs.BackColor = System.Drawing.Color.Transparent;
+            this.CountMs.Location = new System.Drawing.Point(367, 80);
+            this.CountMs.Name = "CountMs";
+            this.CountMs.Size = new System.Drawing.Size(34, 13);
+            this.CountMs.TabIndex = 15;
+            this.CountMs.Text = "00:00";
+            this.CountMs.Click += new System.EventHandler(this.CountMs_Click);
+            // 
+            // Aleatorio
+            // 
+            this.Aleatorio.ActiveImage = null;
+            this.Aleatorio.AllowAnimations = true;
+            this.Aleatorio.AllowBuffering = false;
+            this.Aleatorio.AllowToggling = false;
+            this.Aleatorio.AllowZooming = true;
+            this.Aleatorio.AllowZoomingOnFocus = false;
+            this.Aleatorio.BackColor = System.Drawing.Color.Transparent;
+            this.Aleatorio.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.Aleatorio.ErrorImage = ((System.Drawing.Image)(resources.GetObject("Aleatorio.ErrorImage")));
+            this.Aleatorio.FadeWhenInactive = false;
+            this.Aleatorio.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.Aleatorio.Image = ((System.Drawing.Image)(resources.GetObject("Aleatorio.Image")));
+            this.Aleatorio.ImageActive = null;
+            this.Aleatorio.ImageLocation = null;
+            this.Aleatorio.ImageMargin = 5;
+            this.Aleatorio.ImageSize = new System.Drawing.Size(25, 27);
+            this.Aleatorio.ImageZoomSize = new System.Drawing.Size(30, 32);
+            this.Aleatorio.InitialImage = ((System.Drawing.Image)(resources.GetObject("Aleatorio.InitialImage")));
+            this.Aleatorio.Location = new System.Drawing.Point(155, 58);
+            this.Aleatorio.Name = "Aleatorio";
+            this.Aleatorio.Rotation = 0;
+            this.Aleatorio.ShowActiveImage = true;
+            this.Aleatorio.ShowCursorChanges = true;
+            this.Aleatorio.ShowImageBorders = true;
+            this.Aleatorio.ShowSizeMarkers = false;
+            this.Aleatorio.Size = new System.Drawing.Size(30, 32);
+            this.Aleatorio.TabIndex = 13;
+            this.Aleatorio.ToolTipText = "";
+            this.Aleatorio.WaitOnLoad = false;
+            this.Aleatorio.Zoom = 5;
+            this.Aleatorio.ZoomSpeed = 10;
+            this.Aleatorio.Click += new System.EventHandler(this.Aleatorio_Click);
+            // 
+            // Loop
+            // 
+            this.Loop.ActiveImage = null;
+            this.Loop.AllowAnimations = true;
+            this.Loop.AllowBuffering = false;
+            this.Loop.AllowToggling = false;
+            this.Loop.AllowZooming = true;
+            this.Loop.AllowZoomingOnFocus = false;
+            this.Loop.BackColor = System.Drawing.Color.Transparent;
+            this.Loop.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.Loop.ErrorImage = ((System.Drawing.Image)(resources.GetObject("Loop.ErrorImage")));
+            this.Loop.FadeWhenInactive = false;
+            this.Loop.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.Loop.Image = ((System.Drawing.Image)(resources.GetObject("Loop.Image")));
+            this.Loop.ImageActive = null;
+            this.Loop.ImageLocation = null;
+            this.Loop.ImageMargin = 5;
+            this.Loop.ImageSize = new System.Drawing.Size(25, 27);
+            this.Loop.ImageZoomSize = new System.Drawing.Size(30, 32);
+            this.Loop.InitialImage = ((System.Drawing.Image)(resources.GetObject("Loop.InitialImage")));
+            this.Loop.Location = new System.Drawing.Point(331, 58);
+            this.Loop.Name = "Loop";
+            this.Loop.Rotation = 0;
+            this.Loop.ShowActiveImage = true;
+            this.Loop.ShowCursorChanges = true;
+            this.Loop.ShowImageBorders = true;
+            this.Loop.ShowSizeMarkers = false;
+            this.Loop.Size = new System.Drawing.Size(30, 32);
+            this.Loop.TabIndex = 12;
+            this.Loop.ToolTipText = "";
+            this.Loop.WaitOnLoad = false;
+            this.Loop.Zoom = 5;
+            this.Loop.ZoomSpeed = 10;
+            // 
+            // rewind
+            // 
+            this.rewind.ActiveImage = null;
+            this.rewind.AllowAnimations = true;
+            this.rewind.AllowBuffering = false;
+            this.rewind.AllowToggling = false;
+            this.rewind.AllowZooming = true;
+            this.rewind.AllowZoomingOnFocus = false;
+            this.rewind.BackColor = System.Drawing.Color.Transparent;
+            this.rewind.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.rewind.ErrorImage = ((System.Drawing.Image)(resources.GetObject("rewind.ErrorImage")));
+            this.rewind.FadeWhenInactive = false;
+            this.rewind.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.rewind.Image = ((System.Drawing.Image)(resources.GetObject("rewind.Image")));
+            this.rewind.ImageActive = null;
+            this.rewind.ImageLocation = null;
+            this.rewind.ImageMargin = 5;
+            this.rewind.ImageSize = new System.Drawing.Size(33, 33);
+            this.rewind.ImageZoomSize = new System.Drawing.Size(38, 38);
+            this.rewind.InitialImage = ((System.Drawing.Image)(resources.GetObject("rewind.InitialImage")));
+            this.rewind.Location = new System.Drawing.Point(191, 52);
+            this.rewind.Name = "rewind";
+            this.rewind.Rotation = 0;
+            this.rewind.ShowActiveImage = true;
+            this.rewind.ShowCursorChanges = true;
+            this.rewind.ShowImageBorders = true;
+            this.rewind.ShowSizeMarkers = false;
+            this.rewind.Size = new System.Drawing.Size(38, 38);
+            this.rewind.TabIndex = 11;
+            this.rewind.ToolTipText = "";
+            this.rewind.WaitOnLoad = false;
+            this.rewind.Zoom = 5;
+            this.rewind.ZoomSpeed = 10;
+            this.rewind.Click += new System.EventHandler(this.btnRewind_Click);
+            // 
+            // Play
+            // 
+            this.Play.ActiveImage = null;
+            this.Play.AllowAnimations = true;
+            this.Play.AllowBuffering = false;
+            this.Play.AllowToggling = false;
+            this.Play.AllowZooming = true;
+            this.Play.AllowZoomingOnFocus = false;
+            this.Play.BackColor = System.Drawing.Color.Transparent;
+            this.Play.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.Play.ErrorImage = ((System.Drawing.Image)(resources.GetObject("Play.ErrorImage")));
+            this.Play.FadeWhenInactive = false;
+            this.Play.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.Play.Image = ((System.Drawing.Image)(resources.GetObject("Play.Image")));
+            this.Play.ImageActive = null;
+            this.Play.ImageLocation = null;
+            this.Play.ImageMargin = 5;
+            this.Play.ImageSize = new System.Drawing.Size(33, 33);
+            this.Play.ImageZoomSize = new System.Drawing.Size(38, 38);
+            this.Play.InitialImage = ((System.Drawing.Image)(resources.GetObject("Play.InitialImage")));
+            this.Play.Location = new System.Drawing.Point(239, 52);
+            this.Play.Name = "Play";
+            this.Play.Rotation = 0;
+            this.Play.ShowActiveImage = true;
+            this.Play.ShowCursorChanges = true;
+            this.Play.ShowImageBorders = true;
+            this.Play.ShowSizeMarkers = false;
+            this.Play.Size = new System.Drawing.Size(38, 38);
+            this.Play.TabIndex = 9;
+            this.Play.ToolTipText = "";
+            this.Play.WaitOnLoad = false;
+            this.Play.Zoom = 5;
+            this.Play.ZoomSpeed = 10;
+            this.Play.Click += new System.EventHandler(this.btnPlay_Click);
+            // 
+            // Skip
+            // 
+            this.Skip.ActiveImage = null;
+            this.Skip.AllowAnimations = true;
+            this.Skip.AllowBuffering = false;
+            this.Skip.AllowToggling = false;
+            this.Skip.AllowZooming = true;
+            this.Skip.AllowZoomingOnFocus = false;
+            this.Skip.BackColor = System.Drawing.Color.Transparent;
+            this.Skip.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.Skip.ErrorImage = ((System.Drawing.Image)(resources.GetObject("Skip.ErrorImage")));
+            this.Skip.FadeWhenInactive = false;
+            this.Skip.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.Skip.Image = ((System.Drawing.Image)(resources.GetObject("Skip.Image")));
+            this.Skip.ImageActive = null;
+            this.Skip.ImageLocation = null;
+            this.Skip.ImageMargin = 5;
+            this.Skip.ImageSize = new System.Drawing.Size(33, 33);
+            this.Skip.ImageZoomSize = new System.Drawing.Size(38, 38);
+            this.Skip.InitialImage = ((System.Drawing.Image)(resources.GetObject("Skip.InitialImage")));
+            this.Skip.Location = new System.Drawing.Point(287, 52);
+            this.Skip.Name = "Skip";
+            this.Skip.Rotation = 0;
+            this.Skip.ShowActiveImage = true;
+            this.Skip.ShowCursorChanges = true;
+            this.Skip.ShowImageBorders = true;
+            this.Skip.ShowSizeMarkers = false;
+            this.Skip.Size = new System.Drawing.Size(38, 38);
+            this.Skip.TabIndex = 10;
+            this.Skip.ToolTipText = "";
+            this.Skip.WaitOnLoad = false;
+            this.Skip.Zoom = 5;
+            this.Skip.ZoomSpeed = 10;
+            this.Skip.Click += new System.EventHandler(this.btnSkip_Click);
+            // 
+            // BarraProgress
+            // 
+            this.BarraProgress.AllowCursorChanges = true;
+            this.BarraProgress.AllowHomeEndKeysDetection = false;
+            this.BarraProgress.AllowIncrementalClickMoves = true;
+            this.BarraProgress.AllowMouseDownEffects = false;
+            this.BarraProgress.AllowMouseHoverEffects = false;
+            this.BarraProgress.AllowScrollingAnimations = true;
+            this.BarraProgress.AllowScrollKeysDetection = true;
+            this.BarraProgress.AllowScrollOptionsMenu = true;
+            this.BarraProgress.AllowShrinkingOnFocusLost = false;
+            this.BarraProgress.BackColor = System.Drawing.Color.Transparent;
+            this.BarraProgress.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BarraProgress.BackgroundImage")));
+            this.BarraProgress.BindingContainer = null;
+            this.BarraProgress.BorderRadius = 2;
+            this.BarraProgress.BorderThickness = 1;
+            this.BarraProgress.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BarraProgress.DrawThickBorder = true;
+            this.BarraProgress.DurationBeforeShrink = 2000;
+            this.BarraProgress.ElapsedColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(230)))), ((int)(((byte)(154)))));
+            this.BarraProgress.LargeChange = 10;
+            this.BarraProgress.Location = new System.Drawing.Point(381, 52);
+            this.BarraProgress.Maximum = 100;
+            this.BarraProgress.Minimum = 0;
+            this.BarraProgress.MinimumSize = new System.Drawing.Size(0, 31);
+            this.BarraProgress.MinimumThumbLength = 18;
+            this.BarraProgress.Name = "BarraProgress";
+            this.BarraProgress.OnDisable.ScrollBarBorderColor = System.Drawing.Color.Silver;
+            this.BarraProgress.OnDisable.ScrollBarColor = System.Drawing.Color.Transparent;
+            this.BarraProgress.OnDisable.ThumbColor = System.Drawing.Color.Silver;
+            this.BarraProgress.ScrollBarBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.BarraProgress.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.BarraProgress.ShrinkSizeLimit = 3;
+            this.BarraProgress.Size = new System.Drawing.Size(506, 31);
+            this.BarraProgress.SliderColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.BarraProgress.SliderStyle = Bunifu.UI.WinForms.BunifuHSlider.SliderStyles.Thick;
+            this.BarraProgress.SliderThumbStyle = Utilities.BunifuSlider.BunifuHScrollBar.SliderThumbStyles.Circular;
+            this.BarraProgress.SmallChange = 1;
+            this.BarraProgress.TabIndex = 14;
+            this.BarraProgress.ThumbColor = System.Drawing.Color.MediumSpringGreen;
+            this.BarraProgress.ThumbFillColor = System.Drawing.SystemColors.Control;
+            this.BarraProgress.ThumbLength = 50;
+            this.BarraProgress.ThumbMargin = 1;
+            this.BarraProgress.ThumbSize = Bunifu.UI.WinForms.BunifuHSlider.ThumbSizes.Medium;
+            this.BarraProgress.ThumbStyle = Bunifu.UI.WinForms.BunifuHSlider.ThumbStyles.Outline;
+            this.BarraProgress.Value = 0;
+            this.BarraProgress.Scroll += new System.EventHandler<Utilities.BunifuSlider.BunifuHScrollBar.ScrollEventArgs>(this.BarraProgress_Scroll);
             // 
             // lblArtista
             // 
@@ -542,10 +700,12 @@ namespace ejemplo
             this.lblTituloCancion.Size = new System.Drawing.Size(174, 28);
             this.lblTituloCancion.TabIndex = 5;
             this.lblTituloCancion.Text = "Titulo de la canción";
+            this.lblTituloCancion.Click += new System.EventHandler(this.lblTituloCancion_Click);
             // 
             // ImgCancion
             // 
             this.ImgCancion.BackColor = System.Drawing.Color.Transparent;
+            this.ImgCancion.Image = ((System.Drawing.Image)(resources.GetObject("ImgCancion.Image")));
             this.ImgCancion.Location = new System.Drawing.Point(12, 6);
             this.ImgCancion.Name = "ImgCancion";
             this.ImgCancion.Size = new System.Drawing.Size(130, 93);
@@ -553,20 +713,6 @@ namespace ejemplo
             this.ImgCancion.TabIndex = 4;
             this.ImgCancion.TabStop = false;
             this.ImgCancion.Click += new System.EventHandler(this.ImgCancion_Click);
-            // 
-            // btnCerrarApp
-            // 
-            this.btnCerrarApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrarApp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCerrarApp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrarApp.Image = global::ejemplo.Properties.Resources.eliminar__1_;
-            this.btnCerrarApp.Location = new System.Drawing.Point(593, 3);
-            this.btnCerrarApp.Name = "btnCerrarApp";
-            this.btnCerrarApp.Size = new System.Drawing.Size(22, 19);
-            this.btnCerrarApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCerrarApp.TabIndex = 8;
-            this.btnCerrarApp.TabStop = false;
-            this.btnCerrarApp.Click += new System.EventHandler(this.btnCerrarApp_Click);
             // 
             // Header
             // 
@@ -589,6 +735,20 @@ namespace ejemplo
             this.btnMinimizar.TabIndex = 9;
             this.btnMinimizar.TabStop = false;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            // 
+            // btnCerrarApp
+            // 
+            this.btnCerrarApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrarApp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCerrarApp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarApp.Image = global::ejemplo.Properties.Resources.eliminar__1_;
+            this.btnCerrarApp.Location = new System.Drawing.Point(593, 3);
+            this.btnCerrarApp.Name = "btnCerrarApp";
+            this.btnCerrarApp.Size = new System.Drawing.Size(22, 19);
+            this.btnCerrarApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCerrarApp.TabIndex = 8;
+            this.btnCerrarApp.TabStop = false;
+            this.btnCerrarApp.Click += new System.EventHandler(this.btnCerrarApp_Click);
             // 
             // MaxMoveWindows
             // 
@@ -643,65 +803,151 @@ namespace ejemplo
             this.PagContain.Location = new System.Drawing.Point(277, 0);
             this.PagContain.Multiline = true;
             this.PagContain.Name = "PagContain";
-            this.PagContain.Page = this.PagSentting;
-            this.PagContain.PageIndex = 4;
-            this.PagContain.PageName = "PagSentting";
-            this.PagContain.PageTitle = "Configuracion";
+            this.PagContain.Page = this.PagInicio;
+            this.PagContain.PageIndex = 0;
+            this.PagContain.PageName = "PagInicio";
+            this.PagContain.PageTitle = "Inicio";
             this.PagContain.SelectedIndex = 0;
             this.PagContain.Size = new System.Drawing.Size(639, 390);
             this.PagContain.TabIndex = 12;
-            animation2.AnimateOnlyDifferences = false;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.PagContain.Transition = animation2;
+            animation1.AnimateOnlyDifferences = false;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.PagContain.Transition = animation1;
             this.PagContain.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Custom;
             // 
             // PagInicio
             // 
             this.PagInicio.AutoScroll = true;
             this.PagInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.PagInicio.Controls.Add(this.pictureBox11);
             this.PagInicio.Controls.Add(this.Header);
             this.PagInicio.Location = new System.Drawing.Point(4, 4);
             this.PagInicio.Name = "PagInicio";
             this.PagInicio.Padding = new System.Windows.Forms.Padding(3);
-            this.PagInicio.Size = new System.Drawing.Size(631, 344);
+            this.PagInicio.Size = new System.Drawing.Size(631, 364);
             this.PagInicio.TabIndex = 0;
             this.PagInicio.Text = "Inicio";
+            this.PagInicio.Click += new System.EventHandler(this.PagInicio_Click);
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.Location = new System.Drawing.Point(158, 93);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(353, 214);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox11.TabIndex = 13;
+            this.pictureBox11.TabStop = false;
             // 
             // PagList
             // 
             this.PagList.AutoScroll = true;
             this.PagList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.PagList.Controls.Add(this.axWindowsMediaPlayer);
+            this.PagList.Controls.Add(this.btnAleatorioList);
+            this.PagList.Controls.Add(this.ListMs);
             this.PagList.Controls.Add(this.BusquedaBar);
             this.PagList.Controls.Add(this.btnSubir);
-            this.PagList.Controls.Add(this.ListMs);
             this.PagList.Controls.Add(this.label2);
-            this.PagList.Controls.Add(this.btnAleatorioList);
             this.PagList.Controls.Add(this.panel1);
             this.PagList.Location = new System.Drawing.Point(4, 4);
             this.PagList.Name = "PagList";
             this.PagList.Padding = new System.Windows.Forms.Padding(3);
-            this.PagList.Size = new System.Drawing.Size(631, 344);
+            this.PagList.Size = new System.Drawing.Size(631, 364);
             this.PagList.TabIndex = 1;
             this.PagList.Text = "Pista";
+            // 
+            // axWindowsMediaPlayer
+            // 
+            this.axWindowsMediaPlayer.Enabled = true;
+            this.axWindowsMediaPlayer.Location = new System.Drawing.Point(2, 335);
+            this.axWindowsMediaPlayer.Name = "axWindowsMediaPlayer";
+            this.axWindowsMediaPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer.OcxState")));
+            this.axWindowsMediaPlayer.Size = new System.Drawing.Size(10, 23);
+            this.axWindowsMediaPlayer.TabIndex = 39;
+            this.axWindowsMediaPlayer.Visible = false;
+            this.axWindowsMediaPlayer.StatusChange += new System.EventHandler(this.axWindowsMediaPlayer1_StatusChange);
+            // 
+            // btnAleatorioList
+            // 
+            this.btnAleatorioList.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAleatorioList.Location = new System.Drawing.Point(22, 35);
+            this.btnAleatorioList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAleatorioList.Name = "btnAleatorioList";
+            this.btnAleatorioList.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(120)))), ((int)(((byte)(0)))));
+            this.btnAleatorioList.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(155)))), ((int)(((byte)(10)))));
+            this.btnAleatorioList.OverrideDefault.Back.ColorAngle = 45F;
+            this.btnAleatorioList.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnAleatorioList.OverrideDefault.Border.Rounding = 25;
+            this.btnAleatorioList.Size = new System.Drawing.Size(65, 62);
+            this.btnAleatorioList.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(0)))));
+            this.btnAleatorioList.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(0)))));
+            this.btnAleatorioList.StateCommon.Back.ColorAngle = 180F;
+            this.btnAleatorioList.StateCommon.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
+            this.btnAleatorioList.StateCommon.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnAleatorioList.StateCommon.Back.Image = global::ejemplo.Properties.Resources.aleatorioNegro;
+            this.btnAleatorioList.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
+            this.btnAleatorioList.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(0)))));
+            this.btnAleatorioList.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(171)))), ((int)(((byte)(58)))));
+            this.btnAleatorioList.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnAleatorioList.StateCommon.Border.Rounding = 75;
+            this.btnAleatorioList.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(173)))), ((int)(((byte)(110)))));
+            this.btnAleatorioList.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(0)))));
+            this.btnAleatorioList.StatePressed.Back.ColorAngle = 45F;
+            this.btnAleatorioList.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnAleatorioList.StatePressed.Border.Rounding = 75;
+            this.btnAleatorioList.TabIndex = 38;
+            this.btnAleatorioList.Values.Text = "";
+            this.btnAleatorioList.Click += new System.EventHandler(this.btnAleatorioList_Click);
+            // 
+            // ListMs
+            // 
+            this.ListMs.AllowDrop = true;
+            this.ListMs.Location = new System.Drawing.Point(8, 110);
+            this.ListMs.Name = "ListMs";
+            this.ListMs.Size = new System.Drawing.Size(610, 200);
+            this.ListMs.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.ListMs.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.ListMs.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.ListMs.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.ListMs.StateCommon.Border.Rounding = 7;
+            this.ListMs.StateCommon.Item.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.ListMs.StateCommon.Item.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.ListMs.StateCommon.Item.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.ListMs.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ListMs.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.ListMs.StateDisabled.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.ListMs.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.ListMs.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.ListMs.TabIndex = 37;
+            this.ListMs.SelectedIndexChanged += new System.EventHandler(this.ListMs_SelectedIndexChanged);
             // 
             // BusquedaBar
             // 
             this.BusquedaBar.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.BusquedaBar.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.BusquedaBar.Location = new System.Drawing.Point(450, 44);
+            this.BusquedaBar.Location = new System.Drawing.Point(450, 54);
             this.BusquedaBar.Multiline = true;
             this.BusquedaBar.Name = "BusquedaBar";
             this.BusquedaBar.Size = new System.Drawing.Size(166, 46);
@@ -718,7 +964,7 @@ namespace ejemplo
             // 
             // btnSubir
             // 
-            this.btnSubir.Location = new System.Drawing.Point(560, 296);
+            this.btnSubir.Location = new System.Drawing.Point(567, 316);
             this.btnSubir.Name = "btnSubir";
             this.btnSubir.Size = new System.Drawing.Size(58, 42);
             this.btnSubir.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(0)))));
@@ -732,102 +978,14 @@ namespace ejemplo
             this.btnSubir.StateCommon.Border.Rounding = 10;
             this.btnSubir.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
             this.btnSubir.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubir.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(0)))));
+            this.btnSubir.StateDisabled.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(173)))), ((int)(((byte)(110)))));
+            this.btnSubir.StateDisabled.Back.ColorAngle = 180F;
+            this.btnSubir.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(0)))));
+            this.btnSubir.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(173)))), ((int)(((byte)(110)))));
             this.btnSubir.TabIndex = 35;
             this.btnSubir.Values.Text = "Add";
-            // 
-            // ListMs
-            // 
-            this.ListMs.AllowCustomTheming = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            this.ListMs.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.ListMs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.ListMs.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ListMs.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ListMs.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.ListMs.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ListMs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.ListMs.ColumnHeadersHeight = 40;
-            this.ListMs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.NumberCanc,
-            this.NombreCanc,
-            this.ArtistCanc,
-            this.DuracionCanc});
-            this.ListMs.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(52)))));
-            this.ListMs.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.ListMs.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.White;
-            this.ListMs.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
-            this.ListMs.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
-            this.ListMs.CurrentTheme.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
-            this.ListMs.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
-            this.ListMs.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
-            this.ListMs.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            this.ListMs.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.ListMs.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
-            this.ListMs.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.ListMs.CurrentTheme.Name = null;
-            this.ListMs.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            this.ListMs.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.ListMs.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.White;
-            this.ListMs.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
-            this.ListMs.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ListMs.DefaultCellStyle = dataGridViewCellStyle6;
-            this.ListMs.EnableHeadersVisualStyles = false;
-            this.ListMs.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
-            this.ListMs.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
-            this.ListMs.HeaderBgColor = System.Drawing.Color.Empty;
-            this.ListMs.HeaderForeColor = System.Drawing.Color.White;
-            this.ListMs.Location = new System.Drawing.Point(24, 104);
-            this.ListMs.Name = "ListMs";
-            this.ListMs.RowHeadersVisible = false;
-            this.ListMs.RowTemplate.Height = 40;
-            this.ListMs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ListMs.Size = new System.Drawing.Size(594, 186);
-            this.ListMs.TabIndex = 34;
-            this.ListMs.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Dark;
-            // 
-            // NumberCanc
-            // 
-            this.NumberCanc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.NumberCanc.HeaderText = "No.";
-            this.NumberCanc.Maximum = new decimal(new int[] {
-            999999,
-            0,
-            0,
-            0});
-            this.NumberCanc.Name = "NumberCanc";
-            this.NumberCanc.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.NumberCanc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.NumberCanc.Width = 59;
-            // 
-            // NombreCanc
-            // 
-            this.NombreCanc.HeaderText = "Nombre";
-            this.NombreCanc.Name = "NombreCanc";
-            // 
-            // ArtistCanc
-            // 
-            this.ArtistCanc.HeaderText = "Artista";
-            this.ArtistCanc.Name = "ArtistCanc";
-            // 
-            // DuracionCanc
-            // 
-            this.DuracionCanc.HeaderText = "Duración";
-            this.DuracionCanc.Name = "DuracionCanc";
+            this.btnSubir.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnSubir_MouseClick);
             // 
             // label2
             // 
@@ -839,28 +997,6 @@ namespace ejemplo
             this.label2.Size = new System.Drawing.Size(291, 42);
             this.label2.TabIndex = 33;
             this.label2.Text = "Lista de Reproducción";
-            // 
-            // btnAleatorioList
-            // 
-            this.btnAleatorioList.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAleatorioList.Location = new System.Drawing.Point(22, 35);
-            this.btnAleatorioList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnAleatorioList.Name = "btnAleatorioList";
-            this.btnAleatorioList.Size = new System.Drawing.Size(65, 62);
-            this.btnAleatorioList.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(0)))));
-            this.btnAleatorioList.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(0)))));
-            this.btnAleatorioList.StateCommon.Back.ColorAngle = 180F;
-            this.btnAleatorioList.StateCommon.Back.Image = global::ejemplo.Properties.Resources.aleatorioNegro;
-            this.btnAleatorioList.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
-            this.btnAleatorioList.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(0)))));
-            this.btnAleatorioList.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(171)))), ((int)(((byte)(58)))));
-            this.btnAleatorioList.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnAleatorioList.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.TileFlipXY;
-            this.btnAleatorioList.StateCommon.Border.Rounding = 75;
-            this.btnAleatorioList.TabIndex = 32;
-            this.btnAleatorioList.Values.Text = "";
             // 
             // panel1
             // 
@@ -906,14 +1042,14 @@ namespace ejemplo
             this.PagPistas.Controls.Add(this.label4);
             this.PagPistas.Controls.Add(this.label5);
             this.PagPistas.Controls.Add(this.label6);
+            this.PagPistas.Controls.Add(this.panel2);
             this.PagPistas.Controls.Add(this.pictureBox9);
             this.PagPistas.Controls.Add(this.pictureBox10);
             this.PagPistas.Controls.Add(this.Album1);
-            this.PagPistas.Controls.Add(this.panel2);
             this.PagPistas.Location = new System.Drawing.Point(4, 4);
             this.PagPistas.Name = "PagPistas";
             this.PagPistas.Padding = new System.Windows.Forms.Padding(3);
-            this.PagPistas.Size = new System.Drawing.Size(631, 344);
+            this.PagPistas.Size = new System.Drawing.Size(631, 364);
             this.PagPistas.TabIndex = 2;
             this.PagPistas.Text = "Albumes";
             // 
@@ -968,30 +1104,6 @@ namespace ejemplo
             this.label6.TabIndex = 17;
             this.label6.Text = "Titulo del Album";
             // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Location = new System.Drawing.Point(464, 47);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(158, 158);
-            this.pictureBox9.TabIndex = 16;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Location = new System.Drawing.Point(235, 47);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(158, 158);
-            this.pictureBox10.TabIndex = 15;
-            this.pictureBox10.TabStop = false;
-            // 
-            // Album1
-            // 
-            this.Album1.Location = new System.Drawing.Point(13, 47);
-            this.Album1.Name = "Album1";
-            this.Album1.Size = new System.Drawing.Size(158, 158);
-            this.Album1.TabIndex = 14;
-            this.Album1.TabStop = false;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.pictureBox3);
@@ -1028,6 +1140,30 @@ namespace ejemplo
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.btnCerrarApp_Click);
             // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Location = new System.Drawing.Point(464, 47);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(158, 158);
+            this.pictureBox9.TabIndex = 16;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Location = new System.Drawing.Point(235, 47);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(158, 158);
+            this.pictureBox10.TabIndex = 15;
+            this.pictureBox10.TabStop = false;
+            // 
+            // Album1
+            // 
+            this.Album1.Location = new System.Drawing.Point(13, 47);
+            this.Album1.Name = "Album1";
+            this.Album1.Size = new System.Drawing.Size(158, 158);
+            this.Album1.TabIndex = 14;
+            this.Album1.TabStop = false;
+            // 
             // PagImportC
             // 
             this.PagImportC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
@@ -1038,7 +1174,7 @@ namespace ejemplo
             this.PagImportC.Location = new System.Drawing.Point(4, 4);
             this.PagImportC.Name = "PagImportC";
             this.PagImportC.Padding = new System.Windows.Forms.Padding(3);
-            this.PagImportC.Size = new System.Drawing.Size(631, 344);
+            this.PagImportC.Size = new System.Drawing.Size(631, 364);
             this.PagImportC.TabIndex = 3;
             this.PagImportC.Text = "Importar canciones";
             // 
@@ -1224,7 +1360,7 @@ namespace ejemplo
             this.ModeLight.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ModeLight.CheckedSwitchColor = System.Drawing.Color.White;
             this.ModeLight.CheckedSwitchStyle = Bunifu.UI.WinForms.BunifuToggleSwitch2.SwitchStyles.Fill;
-            this.ModeLight.Location = new System.Drawing.Point(552, 118);
+            this.ModeLight.Location = new System.Drawing.Point(545, 118);
             this.ModeLight.Name = "ModeLight";
             this.ModeLight.OutlineThickness = 2;
             this.ModeLight.Size = new System.Drawing.Size(55, 30);
@@ -1302,52 +1438,13 @@ namespace ejemplo
             this.pictureBox8.TabStop = false;
             this.pictureBox8.Click += new System.EventHandler(this.btnCerrarApp_Click);
             // 
-            // bunifuHSlider1
+            // SubirMs
             // 
-            this.bunifuHSlider1.AllowCursorChanges = true;
-            this.bunifuHSlider1.AllowHomeEndKeysDetection = false;
-            this.bunifuHSlider1.AllowIncrementalClickMoves = true;
-            this.bunifuHSlider1.AllowMouseDownEffects = false;
-            this.bunifuHSlider1.AllowMouseHoverEffects = false;
-            this.bunifuHSlider1.AllowScrollingAnimations = true;
-            this.bunifuHSlider1.AllowScrollKeysDetection = true;
-            this.bunifuHSlider1.AllowScrollOptionsMenu = true;
-            this.bunifuHSlider1.AllowShrinkingOnFocusLost = false;
-            this.bunifuHSlider1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuHSlider1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuHSlider1.BackgroundImage")));
-            this.bunifuHSlider1.BindingContainer = null;
-            this.bunifuHSlider1.BorderRadius = 1;
-            this.bunifuHSlider1.BorderThickness = 1;
-            this.bunifuHSlider1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuHSlider1.DrawThickBorder = false;
-            this.bunifuHSlider1.DurationBeforeShrink = 2000;
-            this.bunifuHSlider1.ElapsedColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(230)))), ((int)(((byte)(154)))));
-            this.bunifuHSlider1.LargeChange = 10;
-            this.bunifuHSlider1.Location = new System.Drawing.Point(381, 54);
-            this.bunifuHSlider1.Maximum = 100;
-            this.bunifuHSlider1.Minimum = 0;
-            this.bunifuHSlider1.MinimumSize = new System.Drawing.Size(0, 31);
-            this.bunifuHSlider1.MinimumThumbLength = 18;
-            this.bunifuHSlider1.Name = "bunifuHSlider1";
-            this.bunifuHSlider1.OnDisable.ScrollBarBorderColor = System.Drawing.Color.Silver;
-            this.bunifuHSlider1.OnDisable.ScrollBarColor = System.Drawing.Color.Transparent;
-            this.bunifuHSlider1.OnDisable.ThumbColor = System.Drawing.Color.Silver;
-            this.bunifuHSlider1.ScrollBarBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.bunifuHSlider1.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.bunifuHSlider1.ShrinkSizeLimit = 3;
-            this.bunifuHSlider1.Size = new System.Drawing.Size(500, 31);
-            this.bunifuHSlider1.SliderColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.bunifuHSlider1.SliderStyle = Bunifu.UI.WinForms.BunifuHSlider.SliderStyles.Thin;
-            this.bunifuHSlider1.SliderThumbStyle = Utilities.BunifuSlider.BunifuHScrollBar.SliderThumbStyles.Circular;
-            this.bunifuHSlider1.SmallChange = 1;
-            this.bunifuHSlider1.TabIndex = 14;
-            this.bunifuHSlider1.ThumbColor = System.Drawing.Color.MediumSpringGreen;
-            this.bunifuHSlider1.ThumbFillColor = System.Drawing.SystemColors.Control;
-            this.bunifuHSlider1.ThumbLength = 49;
-            this.bunifuHSlider1.ThumbMargin = 1;
-            this.bunifuHSlider1.ThumbSize = Bunifu.UI.WinForms.BunifuHSlider.ThumbSizes.Medium;
-            this.bunifuHSlider1.ThumbStyle = Bunifu.UI.WinForms.BunifuHSlider.ThumbStyles.Outline;
-            this.bunifuHSlider1.Value = 50;
+            this.SubirMs.FileName = "openFileDialog1";
+            // 
+            // timer
+            // 
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // Inicio
             // 
@@ -1366,7 +1463,7 @@ namespace ejemplo
             this.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.StateCommon.Border.Rounding = 0;
+            this.StateCommon.Border.Rounding = 12;
             this.Text = "Inicioo";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Inicio_MouseDown);
             this.MenuV.ResumeLayout(false);
@@ -1375,26 +1472,32 @@ namespace ejemplo
             ((System.ComponentModel.ISupportInitialize)(this.BarraReproduccion)).EndInit();
             this.BarraReproduccion.ResumeLayout(false);
             this.BarraReproduccion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLoop)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAleatorio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSkip)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRewind)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPlay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgCancion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrarApp)).EndInit();
             this.Header.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrarApp)).EndInit();
             this.PagContain.ResumeLayout(false);
             this.PagInicio.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.PagList.ResumeLayout(false);
             this.PagList.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ListMs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.PagPistas.ResumeLayout(false);
             this.PagPistas.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Album1)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Album1)).EndInit();
             this.PagImportC.ResumeLayout(false);
             this.PagImportC.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -1432,11 +1535,11 @@ namespace ejemplo
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox1;
         private Bunifu.UI.WinForms.BunifuShapes bunifuShapes2;
         private Bunifu.UI.WinForms.BunifuShapes bunifuShapes1;
-        private Bunifu.UI.WinForms.BunifuImageButton btnPlay;
-        private Bunifu.UI.WinForms.BunifuImageButton btnAleatorio;
-        private Bunifu.UI.WinForms.BunifuImageButton btnLoop;
-        private Bunifu.UI.WinForms.BunifuImageButton btnrewind;
-        private Bunifu.UI.WinForms.BunifuImageButton btnSkip;
+        private Bunifu.UI.WinForms.BunifuImageButton Play;
+        private Bunifu.UI.WinForms.BunifuImageButton Aleatorio;
+        private Bunifu.UI.WinForms.BunifuImageButton Loop;
+        private Bunifu.UI.WinForms.BunifuImageButton rewind;
+        private Bunifu.UI.WinForms.BunifuImageButton Skip;
         private Bunifu.UI.WinForms.BunifuPages PagContain;
         private TabPage PagInicio;
         private TabPage PagList;
@@ -1457,13 +1560,7 @@ namespace ejemplo
         private PictureBox pictureBox8;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox BusquedaBar;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnSubir;
-        private Bunifu.UI.WinForms.BunifuDataGridView ListMs;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn NumberCanc;
-        private DataGridViewTextBoxColumn NombreCanc;
-        private DataGridViewTextBoxColumn ArtistCanc;
-        private DataGridViewTextBoxColumn DuracionCanc;
         private Label label2;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnAleatorioList;
         private Label label3;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnSubirDrive;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnSubirDispo;
@@ -1483,6 +1580,19 @@ namespace ejemplo
         private Label label9;
         private Label label10;
         private Label lblVersion;
-        private Bunifu.UI.WinForms.BunifuHSlider bunifuHSlider1;
+        private Bunifu.UI.WinForms.BunifuHSlider BarraProgress;
+        private ComponentFactory.Krypton.Toolkit.KryptonListBox ListMs;
+        private PictureBox pictureBox11;
+        private OpenFileDialog SubirMs;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnAleatorioList;
+        private Label DurationCanc;
+        private Label CountMs;
+        private PictureBox btnLoop;
+        private PictureBox btnAleatorio;
+        private PictureBox btnSkip;
+        private PictureBox btnRewind;
+        private PictureBox btnPlay;
+        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer;
+        private Timer timer;
     }
 }

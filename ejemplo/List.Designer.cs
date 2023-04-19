@@ -38,13 +38,13 @@
             this.btnCerrarApp = new System.Windows.Forms.PictureBox();
             this.MaxMoveWindows = new Bunifu.UI.WinForms.BunifuFormDock();
             this.ListMs = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.btnSubir = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.BusquedaBar = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.NumberCanc = new ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn();
             this.NombreCanc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ArtistCanc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DuracionCanc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.btnSubir = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.BusquedaBar = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrarApp)).BeginInit();
@@ -72,6 +72,8 @@
             this.btnAleatorioList.StateCommon.Border.Rounding = 75;
             this.btnAleatorioList.TabIndex = 17;
             this.btnAleatorioList.Values.Text = "";
+            this.btnAleatorioList.Click += new System.EventHandler(this.btnAleatorioList_Click);
+            this.btnAleatorioList.DoubleClick += new System.EventHandler(this.btnAleatorioList_DoubleClick);
             // 
             // label1
             // 
@@ -172,8 +174,8 @@
             this.ListMs.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.ListMs.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
@@ -204,10 +206,10 @@
             this.ListMs.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
             this.ListMs.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.ListMs.DefaultCellStyle = dataGridViewCellStyle6;
@@ -224,6 +226,35 @@
             this.ListMs.Size = new System.Drawing.Size(594, 209);
             this.ListMs.TabIndex = 29;
             this.ListMs.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Dark;
+            // 
+            // NumberCanc
+            // 
+            this.NumberCanc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.NumberCanc.HeaderText = "No.";
+            this.NumberCanc.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
+            this.NumberCanc.Name = "NumberCanc";
+            this.NumberCanc.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.NumberCanc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.NumberCanc.Width = 59;
+            // 
+            // NombreCanc
+            // 
+            this.NombreCanc.HeaderText = "Nombre";
+            this.NombreCanc.Name = "NombreCanc";
+            // 
+            // ArtistCanc
+            // 
+            this.ArtistCanc.HeaderText = "Artista";
+            this.ArtistCanc.Name = "ArtistCanc";
+            // 
+            // DuracionCanc
+            // 
+            this.DuracionCanc.HeaderText = "Duración";
+            this.DuracionCanc.Name = "DuracionCanc";
             // 
             // openFileDialog
             // 
@@ -264,36 +295,6 @@
             this.BusquedaBar.TabIndex = 31;
             this.BusquedaBar.Text = "Buscar...";
             this.BusquedaBar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            
-            // 
-            // NumberCanc
-            // 
-            this.NumberCanc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.NumberCanc.HeaderText = "No.";
-            this.NumberCanc.Maximum = new decimal(new int[] {
-            999999,
-            0,
-            0,
-            0});
-            this.NumberCanc.Name = "NumberCanc";
-            this.NumberCanc.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.NumberCanc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.NumberCanc.Width = 62;
-            // 
-            // NombreCanc
-            // 
-            this.NombreCanc.HeaderText = "Nombre";
-            this.NombreCanc.Name = "NombreCanc";
-            // 
-            // ArtistCanc
-            // 
-            this.ArtistCanc.HeaderText = "Artista";
-            this.ArtistCanc.Name = "ArtistCanc";
-            // 
-            // DuracionCanc
-            // 
-            this.DuracionCanc.HeaderText = "Duración";
-            this.DuracionCanc.Name = "DuracionCanc";
             // 
             // List
             // 

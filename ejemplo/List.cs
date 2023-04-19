@@ -12,6 +12,11 @@ using ComponentFactory.Krypton;
 using ComponentFactory.Krypton.Toolkit;
 using System.Reflection.Emit;
 using ejemplo;
+using WMPLib;
+using AxWMPLib;
+using ejemplo.Resources;
+using DevExpress.Utils.CommonDialogs;
+using System.IO;
 
 namespace ejemplo
 {
@@ -45,5 +50,14 @@ namespace ejemplo
 
         }
 
+        private void btnAleatorioList_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnAleatorioList_DoubleClick(object sender, EventArgs e)
+        {
+
+        }
     } 
 }
